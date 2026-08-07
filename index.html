@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azimut Realty CRM</title>
+<title>AweLabs CRM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -613,7 +613,7 @@ tbody tr:hover td { background: var(--bg3); }
   <div class="topbar-logo">
     <div class="logo-icon">🌴</div>
     <div>
-      <div class="logo-text">Azimut Realty</div>
+      <div class="logo-text">AweLabs</div>
       <div class="logo-sub">CRM Platform</div>
     </div>
   </div>
@@ -1367,13 +1367,13 @@ tbody tr:hover td { background: var(--bg3); }
               <div style="font-size:12px;color:var(--green)">● Активен</div></div>
               <button class="btn sm" style="margin-left:auto" onclick="showToast('⚙️ Настройки Telegram')">Настроить</button>
             </div>
-            <div style="font-size:12px;color:var(--text2)">Бот @azimut_realty_bot · 12 подписчиков</div>
+            <div style="font-size:12px;color:var(--text2)">Бот @awelabs_demo_bot · 12 подписчиков</div>
           </div></div>
 
           <div class="dash-card"><div style="padding:14px">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
               <span style="font-size:24px">🌐</span>
-              <div><div style="font-weight:500;font-size:14px">Сайт azimut.asia</div>
+              <div><div style="font-weight:500;font-size:14px">Сайт awelabs.example</div>
               <div style="font-size:12px;color:var(--red)">● Не настроен</div></div>
               <button class="btn sm" style="margin-left:auto" onclick="showToast('⚙️ Подключить сайт')">Подключить</button>
             </div>
@@ -1965,10 +1965,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-      <button class="btn" onclick="closeModal('deal-card-modal')">Закрыть</button>
-    </div>
-  </div>
-</div>
 
 <!-- ── RENT CONTRACT MODAL ───────────────────────────────────────────────── -->
 <div class="modal-overlay" id="rent-contract-modal">
@@ -2278,8 +2274,9 @@ function renderKanbanBoard(deals, stages, containerId) {
     </div>`;
   }).join('');
 
-  // Closed column: always visible for rent, only if deals for sale
-  const showClosed = isRent || closedDeals.length > 0;
+  // Closed column: rent only. The sale pipeline already has closed_won as a
+    // stage, so adding this column too rendered the same deals twice.
+  const showClosed = isRent;
   const closedHtml = showClosed ? `<div class="kanban-col won">
     <div class="kanban-head" style="border-top:2px solid var(--green)">
       <span class="kanban-stage">🏆 ${lang==='ru'?'Закрыто ✓':'Closed ✓'}</span>
@@ -3174,10 +3171,10 @@ let selectedChannel='whatsapp';
 const channelColors={whatsapp:'#25D366',telegram:'#29B6F6',email:'#4E8EF7',sms:'#A78BFA'};
 const channelNames={whatsapp:'WhatsApp',telegram:'Telegram',email:'Email',sms:'SMS'};
 const templates={
-  new_obj:'Здравствуйте, {name}!\n\nПоступил новый объект, соответствующий вашим критериям.\n\n🏠 Объект: [НАЗВАНИЕ]\n📍 Локация: [МЕСТО]\n💰 Цена: [ЦЕНА]\n\nС уважением, {manager}\nAzimut Realty',
-  price_drop:'Добрый день, {name}!\n\nСнижение цены на объект:\n📉 Новая цена: [ЦЕНА]\n\n{manager} | Azimut Realty',
-  follow:'Добрый день, {name}!\n\nКак продвигается поиск? Готовы помочь!\n\n{manager} | Azimut Realty',
-  promo:'Здравствуйте, {name}!\n\n🎁 Специальное предложение месяца:\n[ОПИСАНИЕ]\n\n{manager} | Azimut Realty',
+  new_obj:'Здравствуйте, {name}!\n\nПоступил новый объект, соответствующий вашим критериям.\n\n🏠 Объект: [НАЗВАНИЕ]\n📍 Локация: [МЕСТО]\n💰 Цена: [ЦЕНА]\n\nС уважением, {manager}\nAweLabs',
+  price_drop:'Добрый день, {name}!\n\nСнижение цены на объект:\n📉 Новая цена: [ЦЕНА]\n\n{manager} | AweLabs',
+  follow:'Добрый день, {name}!\n\nКак продвигается поиск? Готовы помочь!\n\n{manager} | AweLabs',
+  promo:'Здравствуйте, {name}!\n\n🎁 Специальное предложение месяца:\n[ОПИСАНИЕ]\n\n{manager} | AweLabs',
 };
 function selectChannel(el,ch) {
   selectedChannel=ch;
