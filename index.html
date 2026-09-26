@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ── RESET & TOKENS ────────────────────────────────────────────────────────── */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -86,19 +86,16 @@ body {
 .nav-sub { padding-left: 22px !important; }
 .nav-sub::before { display: none !important; }
 
-/* Sale group highlight */
 #grp-sale { border-color: rgba(78,142,247,0.3); background: rgba(78,142,247,0.06); }
 #grp-sale:hover { background: rgba(78,142,247,0.12); }
-/* Rent group highlight */
+
 #grp-rent { border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.06); }
 #grp-rent:hover { background: rgba(167,139,250,0.12); }
-
 
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 4px; }
 
-/* ── TOPBAR ────────────────────────────────────────────────────────────────── */
 .topbar {
   height: var(--topbar);
   background: var(--bg2);
@@ -194,14 +191,12 @@ body {
 }
 .user-name { font-size: 12px; font-weight: 500; }
 
-/* ── LAYOUT ────────────────────────────────────────────────────────────────── */
 .layout {
   display: flex;
   flex: 1;
   overflow: hidden;
 }
 
-/* ── SIDEBAR ───────────────────────────────────────────────────────────────── */
 .sidebar {
   width: var(--sidebar);
   min-width: var(--sidebar);
@@ -249,7 +244,6 @@ body {
   border-top: 1px solid var(--border);
 }
 
-/* ── CONTENT ───────────────────────────────────────────────────────────────── */
 .content { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
 .page { display: none; flex-direction: column; height: 100%; overflow: hidden; }
 .page.active { display: flex; }
@@ -265,7 +259,6 @@ body {
 .page-subtitle { font-size: 12px; color: var(--text2); margin-top: 2px; }
 .head-actions { display: flex; gap: 8px; align-items: center; }
 
-/* ── BUTTONS ───────────────────────────────────────────────────────────────── */
 .btn {
   padding: 7px 14px; border-radius: var(--radius); font-size: 13px;
   cursor: pointer; border: 1px solid var(--border2);
@@ -282,7 +275,6 @@ body {
 .btn.ghost { background: transparent; border-color: transparent; }
 .btn.ghost:hover { background: var(--bg3); }
 
-/* ── STATS ROW ─────────────────────────────────────────────────────────────── */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -331,10 +323,8 @@ body {
 .stat-trend.up   { color: var(--green); }
 .stat-trend.down { color: var(--red); }
 
-/* ── PAGE BODY ─────────────────────────────────────────────────────────────── */
 .page-body { flex: 1; overflow-y: auto; padding: 0 20px 20px; }
 
-/* ── TABLE CARD ────────────────────────────────────────────────────────────── */
 .table-card {
   background: var(--bg2);
   border: 1px solid var(--border);
@@ -376,7 +366,6 @@ tbody tr:last-child td { border-bottom: none; }
 tbody tr { transition: background 0.1s; cursor: pointer; }
 tbody tr:hover td { background: var(--bg3); }
 
-/* ── BADGE ─────────────────────────────────────────────────────────────────── */
 .badge {
   display: inline-flex; align-items: center; gap: 4px;
   padding: 3px 8px; border-radius: 20px;
@@ -396,7 +385,6 @@ tbody tr:hover td { background: var(--bg3); }
 .badge.fb     { background: rgba(66,103,178,0.12);  color: #4267B2; }
 .badge.line   { background: rgba(0,195,91,0.12);    color: #00C35B; }
 
-/* ── AVATAR ────────────────────────────────────────────────────────────────── */
 .avatar {
   width: 30px; height: 30px; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
@@ -408,7 +396,6 @@ tbody tr:hover td { background: var(--bg3); }
 .cell-name  { font-weight: 500; font-size: 13px; }
 .cell-sub   { font-size: 11px; color: var(--text3); margin-top: 1px; }
 
-/* ── KANBAN ────────────────────────────────────────────────────────────────── */
 .kanban-wrap {
   flex: 1; overflow-x: auto; overflow-y: hidden;
   padding: 0 20px 20px;
@@ -465,7 +452,6 @@ tbody tr:hover td { background: var(--bg3); }
 .deal-card-date { font-size: 10px; color: var(--text3); }
 .deal-card-avatar { width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, var(--blue),#6366F1); display: flex; align-items: center; justify-content: center; font-size: 9px; color: #fff; font-weight: 600; }
 
-/* ── PROPS GRID ────────────────────────────────────────────────────────────── */
 .prop-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -501,7 +487,6 @@ tbody tr:hover td { background: var(--bg3); }
 .prop-spec { font-size: 11px; color: var(--text2); display: flex; align-items: center; gap: 3px; }
 .prop-integrations { display: flex; gap: 4px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); }
 
-/* ── TASKS ─────────────────────────────────────────────────────────────────── */
 .tasks-list { display: flex; flex-direction: column; gap: 6px; }
 .task-item {
   background: var(--bg2); border: 1px solid var(--border);
@@ -529,7 +514,6 @@ tbody tr:hover td { background: var(--bg3); }
 .pri-norm { background: var(--bg4);      color: var(--text2); padding: 2px 7px; border-radius: 20px; font-size: 10px; }
 .pri-low  { background: var(--green-bg); color: var(--green); padding: 2px 7px; border-radius: 20px; font-size: 10px; }
 
-/* ── MODAL ─────────────────────────────────────────────────────────────────── */
 .modal-overlay {
   display: none; position: fixed; inset: 0;
   background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
@@ -562,7 +546,6 @@ tbody tr:hover td { background: var(--bg3); }
 .form-group select option { background: var(--bg3); }
 .modal-footer { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; }
 
-/* ── TOAST ─────────────────────────────────────────────────────────────────── */
 .toast {
   position: fixed; bottom: 20px; right: 20px;
   background: var(--bg2); border: 1px solid var(--border);
@@ -574,12 +557,10 @@ tbody tr:hover td { background: var(--bg3); }
 }
 @keyframes toastIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
 
-/* ── EMPTY ─────────────────────────────────────────────────────────────────── */
 .empty-state { text-align: center; padding: 48px; color: var(--text3); }
 .empty-state .empty-icon { font-size: 40px; margin-bottom: 12px; }
 .empty-state p { font-size: 13px; }
 
-/* ── DASHBOARD GRID ────────────────────────────────────────────────────────── */
 .dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .dash-card {
   background: var(--bg2); border: 1px solid var(--border);
@@ -608,7 +589,6 @@ tbody tr:hover td { background: var(--bg3); }
 </head>
 <body>
 
-<!-- ── TOPBAR ────────────────────────────────────────────────────────────── -->
 <div class="topbar">
   <div class="topbar-logo">
     <div class="logo-icon">🌴</div>
@@ -638,7 +618,7 @@ tbody tr:hover td { background: var(--bg3); }
         <div class="user-name">Михаил А.</div>
         <div style="font-size:10px;color:var(--text3)" id="user-role-label">Менеджер</div>
       </div>
-      <!-- Role switcher dropdown (demo only) -->
+
       <div id="role-menu" style="display:none;position:absolute;top:42px;right:0;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:6px;min-width:180px;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,0.4)">
         <div style="font-size:10px;color:var(--text3);padding:4px 8px 6px;text-transform:uppercase;letter-spacing:0.06em">Роль (демо)</div>
         <div class="role-opt" onclick="setRole('manager')">👤 Менеджер</div>
@@ -649,13 +629,10 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-<!-- ── MAIN LAYOUT ───────────────────────────────────────────────────────── -->
 <div class="layout">
 
-  <!-- SIDEBAR -->
   <div class="sidebar">
 
-    <!-- Дашборд -->
     <div class="nav-section">
       <div class="nav-item active" onclick="goPage('dashboard')">
         <span class="nav-ico">📊</span><span id="nav-dashboard">Дашборд</span>
@@ -677,7 +654,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- Секция ПРОДАЖА -->
     <div class="nav-section">
       <div class="nav-group-header" onclick="toggleGroup('sale')" id="grp-sale">
         <div style="display:flex;align-items:center;gap:8px">
@@ -700,7 +676,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- Секция АРЕНДА -->
     <div class="nav-section">
       <div class="nav-group-header" onclick="toggleGroup('rent')" id="grp-rent">
         <div style="display:flex;align-items:center;gap:8px">
@@ -727,7 +702,7 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="nav-item" id="nav-pipeline-item" style="display:none" onclick="goPage('pipeline')">
         <span class="nav-ico">📈</span><span id="nav-pipeline-lbl">Pipeline</span>
       </div>
-      <!-- Admin-only section -->
+
       <div id="nav-admin-section" style="display:none">
         <div style="height:1px;background:var(--border);margin:4px 0 8px"></div>
         <div style="font-size:10px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:0.08em;padding:0 10px;margin-bottom:4px">Администратор</div>
@@ -776,10 +751,8 @@ tbody tr:hover td { background: var(--bg3); }
     </div>
   </div>
 
-  <!-- CONTENT -->
   <div class="content">
 
-    <!-- ── DASHBOARD ──────────────────────────────────────────────────────── -->
     <div id="page-dashboard" class="page active">
       <div class="page-head">
         <div>
@@ -850,7 +823,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── CLIENTS ALL (единая база) ─────────────────────────────────────── -->
     <div id="page-clients-all" class="page">
       <div class="page-head">
         <div>
@@ -899,7 +871,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── CLIENTS RENT ───────────────────────────────────────────────────── -->
     <div id="page-clients-rent" class="page">
       <div class="page-head">
         <div>
@@ -943,7 +914,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── CLIENTS SALE ───────────────────────────────────────────────────── -->
     <div id="page-clients-sale" class="page">
       <div class="page-head">
         <div>
@@ -986,7 +956,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── REMINDERS ──────────────────────────────────────────────────────── -->
     <div id="page-reminders" class="page">
       <div class="page-head">
         <div>
@@ -999,7 +968,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── PROPERTIES SALE ───────────────────────────────────────────────── -->
     <div id="page-properties-sale" class="page">
       <div class="page-head">
         <div>
@@ -1026,7 +994,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── PROPERTIES RENT ───────────────────────────────────────────────── -->
     <div id="page-properties-rent" class="page">
       <div class="page-head">
         <div>
@@ -1053,8 +1020,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── DEALS SALE ─────────────────────────────────────────────────────── -->
-    <!-- ── DEALS SALE ─────────────────────────────────────────────────────── -->
     <div id="page-deals-sale" class="page">
       <div class="page-head">
         <div>
@@ -1070,7 +1035,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── DEALS RENT ─────────────────────────────────────────────────────── -->
     <div id="page-deals-rent" class="page">
       <div class="page-head">
         <div>
@@ -1086,7 +1050,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── TASKS ──────────────────────────────────────────────────────────── -->
     <div id="page-tasks" class="page">
       <div class="page-head">
         <div>
@@ -1103,7 +1066,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── LEADS SALE ─────────────────────────────────────────────────────── -->
     <div id="page-leads-sale" class="page">
       <div class="page-head">
         <div>
@@ -1126,7 +1088,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── LEADS RENT ─────────────────────────────────────────────────────── -->
     <div id="page-leads-rent" class="page">
       <div class="page-head">
         <div>
@@ -1149,7 +1110,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── LEADS (old combined, keep hidden) ─────────────────────────────── -->
     <div id="page-leads" class="page">
       <div class="page-head">
         <div>
@@ -1181,7 +1141,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── PIPELINE (Director only) ──────────────────────────────────────── -->
     <div id="page-pipeline" class="page">
       <div class="page-head">
         <div>
@@ -1229,7 +1188,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── ADMIN DASHBOARD ────────────────────────────────────────────────── -->
     <div id="page-admin" class="page">
       <div class="page-head">
         <div>
@@ -1273,7 +1231,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── ADMIN REPORTS ───────────────────────────────────────────────────── -->
     <div id="page-admin-reports" class="page">
       <div class="page-head">
         <div><div class="page-title">📊 Все отчёты</div><div class="page-subtitle">Полная аналитика системы</div></div>
@@ -1314,7 +1271,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── ADMIN USERS ─────────────────────────────────────────────────────── -->
     <div id="page-admin-users" class="page">
       <div class="page-head">
         <div><div class="page-title">👥 Пользователи системы</div><div class="page-subtitle">Управление доступом</div></div>
@@ -1332,7 +1288,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── ADMIN INTEGRATIONS ─────────────────────────────────────────────── -->
     <div id="page-admin-integrations" class="page">
       <div class="page-head">
         <div><div class="page-title">🔗 Интеграции</div><div class="page-subtitle">Управление подключениями к площадкам</div></div>
@@ -1384,7 +1339,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── ADMIN LOGS ──────────────────────────────────────────────────────── -->
     <div id="page-admin-logs" class="page">
       <div class="page-head">
         <div><div class="page-title">📋 Лог действий</div><div class="page-subtitle">История операций всех пользователей</div></div>
@@ -1399,7 +1353,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- ── AGENTS ─────────────────────────────────────────────────────────── -->
     <div id="page-agents" class="page">
       <div class="page-head">
         <div>
@@ -1423,10 +1376,9 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-  </div><!-- /content -->
-</div><!-- /layout -->
+  </div>
+</div>
 
-<!-- ── MODALS ────────────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="broadcast-modal">
   <div class="modal" style="width:520px">
     <div class="modal-head">
@@ -1434,7 +1386,6 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="modal-close" onclick="closeModal('broadcast-modal')">✕</div>
     </div>
 
-    <!-- Кому -->
     <div style="margin-bottom:14px">
       <div style="font-size:11px;font-weight:500;color:var(--text2);margin-bottom:8px">КОМУ ОТПРАВИТЬ</div>
       <div style="display:flex;gap:6px;flex-wrap:wrap" id="broadcast-targets">
@@ -1459,7 +1410,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- Канал -->
     <div style="margin-bottom:14px">
       <div style="font-size:11px;font-weight:500;color:var(--text2);margin-bottom:8px">КАНАЛ ОТПРАВКИ</div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
@@ -1482,7 +1432,6 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- Шаблон -->
     <div style="margin-bottom:14px">
       <div style="font-size:11px;font-weight:500;color:var(--text2);margin-bottom:6px">ШАБЛОН</div>
       <select id="broadcast-template" onchange="applyTemplate()" style="width:100%;padding:8px 11px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);font-size:13px;color:var(--text);font-family:var(--font);margin-bottom:8px">
@@ -1494,7 +1443,6 @@ tbody tr:hover td { background: var(--bg3); }
       </select>
     </div>
 
-    <!-- Текст -->
     <div class="form-group">
       <label>ТЕКСТ СООБЩЕНИЯ</label>
       <textarea id="broadcast-text" rows="5" placeholder="Введите текст сообщения...&#10;&#10;Доступные переменные: {name}, {phone}, {budget}" style="resize:vertical"></textarea>
@@ -1513,7 +1461,6 @@ tbody tr:hover td { background: var(--bg3); }
     </div>
   </div>
 </div>
-
 
 <div class="modal-overlay" id="client-modal">
   <div class="modal">
@@ -1544,14 +1491,12 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
     </div>
 
-    <!-- Статус — появляется после выбора типа сделки -->
     <div id="f-c-status-wrap" style="display:none" class="form-group">
       <label>Статус</label>
       <select id="f-c-status" onchange="onStatusChange()">
       </select>
     </div>
 
-    <!-- Доп. поля для Брони (только аренда + статус "Бронь") -->
     <div id="f-c-booking-wrap" style="display:none">
       <div style="height:1px;background:var(--border);margin:4px 0 12px"></div>
       <div style="font-size:11px;font-weight:600;color:var(--amber);margin-bottom:8px;display:flex;align-items:center;gap:6px">
@@ -1644,7 +1589,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-<!-- ── DEAL MODAL RENT ────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="deal-modal-rent">
   <div class="modal" style="width:520px;max-height:88vh;overflow-y:auto">
     <div class="modal-head">
@@ -1730,7 +1674,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-<!-- ── DEAL MODAL SALE ────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="deal-modal-sale">
   <div class="modal" style="width:540px;max-height:88vh;overflow-y:auto">
     <div class="modal-head">
@@ -1784,7 +1727,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-<!-- ── AGENT MODAL ────────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="agent-modal">
   <div class="modal" style="width:440px">
     <div class="modal-head">
@@ -1861,8 +1803,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-
-<!-- ── CONTRACT MODAL ────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="contract-modal">
   <div class="modal" style="width:500px">
     <div class="modal-head">
@@ -1903,7 +1843,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-<!-- ── LOST DEAL MODAL ───────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="lost-modal">
   <div class="modal" style="width:460px">
     <div class="modal-head">
@@ -1942,7 +1881,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-<!-- ── DEAL CARD MODAL ───────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="deal-card-modal">
   <div class="modal" style="width:460px">
     <div class="modal-head">
@@ -1965,8 +1903,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-
-<!-- ── RENT CONTRACT MODAL ───────────────────────────────────────────────── -->
 <div class="modal-overlay" id="rent-contract-modal">
   <div class="modal" style="width:540px;max-height:90vh;overflow-y:auto">
     <div class="modal-head">
@@ -1992,7 +1928,7 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="form-group"><label>Бронирование</label><input id="rct-booking" placeholder="฿ 18,000" oninput="calcRentBalance()"></div>
       <div class="form-group"><label>Оплата (уже получено)</label><input id="rct-paid" placeholder="฿ 54,000" oninput="calcRentBalance()"></div>
     </div>
-    <!-- Итого дебет/кредит -->
+
     <div id="rct-balance-block" style="background:var(--bg3);border-radius:var(--radius);padding:12px;margin-bottom:12px">
       <div style="font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;margin-bottom:8px">📊 Итого (дебет / кредит)</div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center">
@@ -2001,7 +1937,7 @@ tbody tr:hover td { background: var(--bg3); }
         <div><div style="font-size:10px;color:var(--text3)">Остаток</div><div id="rct-total-balance" style="font-size:14px;font-weight:600;margin-top:3px">—</div></div>
       </div>
     </div>
-    <!-- Комиссия — только директор/админ -->
+
     <div id="rct-commission-block" style="display:none">
       <div style="height:1px;background:var(--border);margin:4px 0 12px"></div>
       <div style="font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;margin-bottom:8px">💼 Комиссия (только для директора)</div>
@@ -2026,7 +1962,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-<!-- ── CHECKOUT MODAL ─────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="checkout-modal">
   <div class="modal" style="width:460px">
     <div class="modal-head">
@@ -2056,7 +1991,6 @@ tbody tr:hover td { background: var(--bg3); }
   </div>
 </div>
 
-<!-- ── SALE AMOUNT EDIT MODAL ────────────────────────────────────────────── -->
 <div class="modal-overlay" id="sale-amount-modal">
   <div class="modal" style="width:380px">
     <div class="modal-head">
@@ -2073,7 +2007,7 @@ tbody tr:hover td { background: var(--bg3); }
 </div>
 
 <script>
-// ── TRANSLATIONS ─────────────────────────────────────────────────────────────
+
 const T = {
   ru: {
     nav_dashboard:'Дашборд', nav_clients_rent:'Клиенты — Аренда', nav_clients_sale:'Клиенты — Продажа',
@@ -2169,7 +2103,7 @@ function setLang(l) {
   lang = l;
   document.documentElement.lang = l;
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === l.toUpperCase()));
-  // Re-render all dynamic content
+
   renderSidebar();
   renderDashboard();
   renderRentClients();
@@ -2181,8 +2115,6 @@ function setLang(l) {
   renderKanban();
 }
 
-// ── DATA ──────────────────────────────────────────────────────────────────────
-// ── UNIFIED CLIENT BASE ───────────────────────────────────────────────────────
 let clientsDB = [
   { id:1,  name:'Александр Петров', email:'petrov@mail.ru',  phone:'+7 999 123-45-67',  request:'Вилла 3 спальни, Паттайя',  budget:'$250–400k', status:'warm',        source:'Avito',    manager:'МА' },
   { id:2,  name:'Sarah Mitchell',   email:'sarah@gmail.com', phone:'+44 77 900 1234',   request:'Condo 1br, Jomtien',        budget:'$600/мес',  status:'negotiation', source:'Facebook', manager:'АК' },
@@ -2196,7 +2128,7 @@ let clientsDB = [
   { id:10, name:'Emma Thompson',    email:'emma@uk.com',     phone:'+44 79 111 2233',   request:'2br apartment, Bangkok',    budget:'$800/мес',  status:'moved_in',    source:'Facebook', manager:'АК' },
   { id:11, name:'Дмитрий Орлов',   email:'orlov@ya.ru',     phone:'+7 999 888-77-66',  request:'Студия краткосрочно',       budget:'฿15k/мес', status:'new',         source:'Telegram', manager:'НС' },
 ];
-// Единая база — аренда и продажа используют одну
+
 const rentClients = clientsDB;
 const saleClients = clientsDB;
 const allClients  = clientsDB;
@@ -2242,8 +2174,6 @@ const STAGES_RENT = [
 let activeDeal = null;let commissionStatus = null;
 let depositReturn = null;
 
-// ── KANBAN RENDER ─────────────────────────────────────────────────────────────
-// ── CHECKIN (dates required) ──────────────────────────────────────────────────
 function openCheckinModal(dealId) {
   const deal = dealsData.rent.find(d=>d.id===dealId);
   if (!deal) return;
@@ -2274,8 +2204,6 @@ function renderKanbanBoard(deals, stages, containerId) {
     </div>`;
   }).join('');
 
-  // Closed column: rent only. The sale pipeline already has closed_won as a
-    // stage, so adding this column too rendered the same deals twice.
   const showClosed = isRent;
   const closedHtml = showClosed ? `<div class="kanban-col won">
     <div class="kanban-head" style="border-top:2px solid var(--green)">
@@ -2293,7 +2221,6 @@ function renderKanbanBoard(deals, stages, containerId) {
     </div>
   </div>` : '';
 
-  // Lost column — only if has deals
   const lostHtml = lostDeals.length > 0 ? `<div class="kanban-col lost">
     <div class="kanban-head" style="border-top:2px solid var(--red)">
       <span class="kanban-stage">❌ ${lang==='ru'?'Потеряно':'Lost'}</span>
@@ -2347,7 +2274,6 @@ function renderKanban() {
   renderKanbanBoard(dealsData.rent, STAGES_RENT, 'kanban-board-rent');
 }
 
-// ── DEAL CARD MODAL ───────────────────────────────────────────────────────────
 function openDealCard(dealId) {
   const deal = [...dealsData.sale,...dealsData.rent].find(d=>d.id===dealId);
   if (!deal) return;
@@ -2360,7 +2286,7 @@ function openDealCard(dealId) {
   const stagesEl = document.getElementById('dcm-stages');
   stagesEl.innerHTML = stages.map(s => {
     const isCurrent = s.id === deal.stage;
-    // Determine action for each stage
+
     let onclick;
     if (deal.dealType === 'rent') {
       if (s.id === 'checkin')     onclick = `moveDeal(${deal.id},'checkin')`;
@@ -2380,7 +2306,6 @@ function openDealCard(dealId) {
     </button>`;
   }).join('');
 
-  // Sale amount edit
   const samBtn = document.getElementById('dcm-lost-btn-wrap');
   if (samBtn && deal.dealType === 'sale') {
     samBtn.innerHTML = `
@@ -2401,27 +2326,23 @@ function moveDeal(dealId, newStage) {
   const deal = [...dealsData.sale,...dealsData.rent].find(d=>d.id===dealId);
   if (!deal) return;
 
-  // SALE: offer → auto-create viewing task
   if (newStage==='offer' && deal.stage!=='offer' && deal.dealType==='sale') {
     tasks.unshift({ title:`📋 Просмотр объекта — ${deal.c}`, due:'Завтра', priority:'high', done:false, overdue:false, client:deal.c, autoCreated:true });
     showToast(`✅ Задание на просмотр создано для ${deal.c}`);
   }
 
-  // RENT: checkin → требует обязательных дат → открываем contract-modal вместо
   if (newStage==='checkin' && deal.dealType==='rent') {
     closeModal('deal-card-modal');
-    // Open checkin date dialog
+
     openCheckinModal(dealId);
     return;
   }
 
-  // RENT: contract → открываем полную форму договора
   if (newStage==='contract' && deal.dealType==='rent') {
     openRentContract(dealId);
     return;
   }
 
-  // RENT: checkout → открываем форму выезда
   if (newStage==='checkout' && deal.dealType==='rent') {
     openCheckout(dealId);
     return;
@@ -2433,7 +2354,6 @@ function moveDeal(dealId, newStage) {
   renderTasks();
 }
 
-// ── SALE CONTRACT ─────────────────────────────────────────────────────────────
 function openContract(dealId) {
   const deal = [...dealsData.sale].find(d=>d.id===dealId);
   if (!deal) return;
@@ -2498,7 +2418,6 @@ function saveContract() {
   renderKanban();
 }
 
-// ── RENT CONTRACT ─────────────────────────────────────────────────────────────
 function openRentContract(dealId, forceStage) {
   const deal = dealsData.rent.find(d=>d.id===dealId);
   if (!deal) return;
@@ -2514,7 +2433,7 @@ function openRentContract(dealId, forceStage) {
   document.getElementById('rct-booking').value     = rc.booking||'';
   document.getElementById('rct-paid').value        = rc.paid||'';
   document.getElementById('rct-commission').value  = rc.commission||'';
-  // Commission visibility by role
+
   const canSeeComm = currentRole==='admin'||currentRole==='director';
   document.getElementById('rct-commission-block').style.display = canSeeComm ? 'block':'none';
   document.getElementById('rct-manager-hint').style.display     = canSeeComm ? 'none':'block';
@@ -2555,7 +2474,7 @@ function saveRentContract() {
     commission:document.getElementById('rct-commission').value,
   };
   activeDeal.stage = 'contract';
-  // Notify director if manager saved without filling commission
+
   if (currentRole==='manager' && !activeDeal.rentContract.commission) {
     showToast('📬 Директор получил уведомление о необходимости заполнить комиссию');
     tasks.unshift({ title:`💼 Заполнить комиссию по сделке: ${activeDeal.t}`, due:'Сегодня', priority:'high', done:false, overdue:false, client:activeDeal.c });
@@ -2566,7 +2485,6 @@ function saveRentContract() {
   showToast('📄 Договор аренды сохранён');
 }
 
-// ── CHECKOUT ──────────────────────────────────────────────────────────────────
 function openCheckout(dealId) {
   const deal = dealsData.rent.find(d=>d.id===dealId);
   if (!deal) return;
@@ -2613,7 +2531,7 @@ function saveCheckout() {
   if (!activeDeal) return;
   const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
   const tds = `${tomorrow.getDate().toString().padStart(2,'0')}.${(tomorrow.getMonth()+1).toString().padStart(2,'0')} в 10:00`;
-  // Cleaning task — always
+
   tasks.unshift({ title:`🧹 Клининг после выезда — ${activeDeal.t.split('→')[0].trim()}`, due:tds, priority:'high', done:false, overdue:false, client:activeDeal.c });
   if (depositReturn) {
     activeDeal.stage = 'closed_won';
@@ -2622,7 +2540,7 @@ function saveCheckout() {
     showToast(`✅ Выезд оформлен, сделка закрыта. Задание на клининг создано на ${tds}`);
   } else {
     activeDeal.stage = 'checkout';
-    // Deposit reminder
+
     tasks.unshift({ title:`💰 Вернуть депозит — ${activeDeal.c} (${activeDeal.rentContract?.deposit||'—'})`, due:tds, priority:'high', done:false, overdue:false, client:activeDeal.c });
     closeModal('checkout-modal');
     renderKanban(); renderTasks();
@@ -2630,7 +2548,6 @@ function saveCheckout() {
   }
 }
 
-// ── SALE AMOUNT EDIT ──────────────────────────────────────────────────────────
 function openSaleAmountEdit(dealId) {
   const deal = dealsData.sale.find(d=>d.id===dealId);
   if (!deal) return;
@@ -2650,7 +2567,6 @@ function saveSaleAmount() {
   showToast(`✅ Сумма сделки обновлена: ${val}`);
 }
 
-// ── LOST DEAL ─────────────────────────────────────────────────────────────────
 function openLostFromCard() {
   if (!activeDeal) return;
   closeModal('deal-card-modal');
@@ -2680,7 +2596,6 @@ function saveLostDeal() {
   renderKanban();
 }
 
-// ── NEW DEAL ──────────────────────────────────────────────────────────────────
 function openNewDeal(type) {
   selectedAgentForDeal = null;
   if (type==='rent') {
@@ -2747,7 +2662,6 @@ function createDealSale() {
   showToast(`✅ Сделка создана: ${newDeal.t}${finalStatus==='negotiation'?' → Переговоры':''}`);
 }
 
-// ── RENT FORM STATUS CHANGE ───────────────────────────────────────────────────
 function onRentStatusChange() {
   const status = document.getElementById('rd-status')?.value;
   document.getElementById('rd-booking-block').style.display  = status==='booking' ?'block':'none';
@@ -2777,7 +2691,6 @@ function onSalePropTypeChange() {
   } else { if(sw) sw.style.display='none'; }
 }
 
-// ── CLIENT SUGGEST ────────────────────────────────────────────────────────────
 function searchClientSuggest(input, listId) {
   const q = input.value.toLowerCase();
   const list = document.getElementById(listId);
@@ -2798,7 +2711,6 @@ function selectClient(inputId, listId, name, phone) {
   if (sel) { sel.style.display='block'; sel.textContent=`✓ Выбран: ${name} · ${phone}`; }
 }
 
-// ── AGENTS ────────────────────────────────────────────────────────────────────
 let agentsData = [
   {id:1,name:'Сомчай Виттая', phone:'+66 81 111 2233',property:'Кондо «The Base», Паттайя',commission:'3%',deals:2},
   {id:2,name:'Анна Ли',       phone:'+66 82 333 4455',property:'Вилла Rawai, Пхукет',       commission:'฿80,000',deals:1},
@@ -2882,7 +2794,6 @@ function saveAgent() {
   showToast(`✅ Агент «${agent.name}» ${dup?'добавлен к сделке':'сохранён'}`);
 }
 
-// ── RENDER CLIENTS ────────────────────────────────────────────────────────────
 const rentStatusMap={new:'🆕 Новый',negotiation:'🗣️ Переговоры',booking:'🔒 Бронь',moved_in:'✅ Заехал',moved_out:'🚪 Выехал',deferred:'⏸️ Отложен',advance:'💵 Аванс',deposit:'🏦 Депозит',done:'✅ Выполнено',warm:'🌡️ Тёплый'};
 const rentStatusBadge={new:'new',negotiation:'warm',booking:'warm',moved_in:'active',moved_out:'cold',deferred:'cold',advance:'hot',deposit:'blue',done:'active',warm:'warm'};
 const saleStatusMap=rentStatusMap;
@@ -2913,7 +2824,6 @@ function clientRow(c,statusMap,statusBadge) {
   </tr>`;
 }
 
-// ── RENDER ALL CLIENTS (единая база) ─────────────────────────────────────────
 function renderAllClients() {
   const q   = (document.getElementById('all-clients-search')?.value||'').toLowerCase();
   const st  = document.getElementById('all-clients-status')?.value||'';
@@ -2968,7 +2878,6 @@ function renderAllClients() {
     `<tr><td colspan="9"><div class="empty-state" style="padding:32px;text-align:center;color:var(--text3)">Клиентов не найдено</div></td></tr>`;
 }
 
-
 function renderRentClients() {
   const q=(document.getElementById('rent-search')?.value||'').toLowerCase();
   const st=document.getElementById('rent-status')?.value||'';
@@ -2987,7 +2896,6 @@ function confirmDeleteClient(name) {
   if(confirm(t('confirm_delete')+'\n\n'+name)) showToast('🗑 '+name+' — удалён');
 }
 
-// ── RENDER PROPERTIES ─────────────────────────────────────────────────────────
 const properties = [
   {emoji:'🏖️',title_ru:'Вилла у моря, 3 спальни', loc:'Паттайя, Джомтьен', type:'Villa',    deal:'sale',price:'฿ 14,500,000',beds:3,baths:3,sqm:280,avito:true, fb:true, color:'linear-gradient(135deg,#1e3a5f,#2563eb)'},
   {emoji:'🏙️',title_ru:'Кондо в центре',           loc:'Бангкок, Сукхумвит',type:'Condo',    deal:'sale',price:'฿ 6,200,000', beds:2,baths:2,sqm:65, avito:false,fb:true, color:'linear-gradient(135deg,#1a1a2e,#6366f1)'},
@@ -3023,7 +2931,6 @@ function renderProperties() {
   if(rentEl)  rentEl.innerHTML=properties.filter(p=>p.deal==='rent').map(propCard).join('');
 }
 
-// ── TASKS ─────────────────────────────────────────────────────────────────────
 let tasks = [
   {title:'Позвонить Chen Wei — условия сделки',   due:'Сегодня, 11:00',priority:'high',  done:false,overdue:false,client:'Chen Wei'},
   {title:'Отправить договор Müller',               due:'Сегодня, 13:00',priority:'high',  done:false,overdue:false,client:'A. Müller'},
@@ -3053,7 +2960,6 @@ function renderTasks() {
 }
 function toggleTask(i){tasks[i].done=!tasks[i].done;renderTasks();}
 
-// ── REMINDERS ─────────────────────────────────────────────────────────────────
 const reminders=[
   {client:'Андрей Козлов',  phone:'+7 916 555-12-34',source:'Авито',   type:'rent',days:3,action:'Связаться в WhatsApp, уточнить параметры'},
   {client:'Siriporn Kaew',  phone:'+66 81 234 5678', source:'Сайт',    type:'sale',days:5,action:'Позвонить, уточнить бюджет'},
@@ -3084,7 +2990,6 @@ function renderReminders() {
   </div>`).join('');
 }
 
-// ── LEADS ─────────────────────────────────────────────────────────────────────
 let leadsData=[
   {id:1,source:'avito',   type:'rent',name:'Андрей Козлов', contact:'+7 916 555-12-34',msg:'Ищу квартиру у моря, аренда',date:'02.05 09:14'},
   {id:2,source:'facebook',type:'sale',name:'Emma Thompson',  contact:'FB Messenger',    msg:'Looking for villa to buy',   date:'02.05 08:30'},
@@ -3144,7 +3049,6 @@ function deleteLead(id) {
   showToast(lang==='ru'?'🗑 Заявка удалена':'🗑 Deleted');
 }
 
-// ── DEFERRED / BROADCAST / QUICK SEND ────────────────────────────────────────
 function openDeferred(name) {
   document.getElementById('deferred-client-name').textContent='👤 '+name;
   document.getElementById('deferred-date').value='';
@@ -3166,7 +3070,6 @@ function quickSend(channel,name,contact) {
   showToast(`📱 Быстрое сообщение → ${name} через ${ch}`);
 }
 
-// ── BROADCAST ────────────────────────────────────────────────────────────────
 let selectedChannel='whatsapp';
 const channelColors={whatsapp:'#25D366',telegram:'#29B6F6',email:'#4E8EF7',sms:'#A78BFA'};
 const channelNames={whatsapp:'WhatsApp',telegram:'Telegram',email:'Email',sms:'SMS'};
@@ -3200,7 +3103,6 @@ function sendBroadcast() {
   setTimeout(()=>showToast('✅ Рассылка завершена'),3000);
 }
 
-// ── PIPELINE ─────────────────────────────────────────────────────────────────
 function renderPipeline() {
   const stageL={new_lead:'Новая заявка',negotiation:'Переговоры',offer:'Предложение',viewing:'Просмотр',booking:'Бронирование',checkin:'Заезд',contract:'Договор',checkout:'Выезд',closed_won:'Закрыто'};
   ['sale','rent'].forEach(type=>{
@@ -3217,7 +3119,6 @@ function renderPipeline() {
   const el=document.getElementById('pl-comm-pend'); if(el) el.textContent=pendingComm;
 }
 
-// ── ADMIN ─────────────────────────────────────────────────────────────────────
 const adminUsers=[
   {name:'Абакумов Михаил',role:'admin',   deals:9, clients:11,active:true},
   {name:'Алина Козлова',  role:'manager', deals:5, clients:6, active:true},
@@ -3278,7 +3179,6 @@ function renderAdminLogs() {
   </tr>`).join('');
 }
 
-// ── ACCORDION ─────────────────────────────────────────────────────────────────
 function toggleGroup(group) {
   const body=document.getElementById('body-'+group);
   const hdr=document.getElementById('grp-'+group);
@@ -3288,7 +3188,6 @@ function toggleGroup(group) {
   hdr.classList.toggle('collapsed',!c);
 }
 
-// ── RENDER SIDEBAR ────────────────────────────────────────────────────────────
 function renderSidebar() {
   const subLabels={
     'nav-dashboard':   lang==='ru'?'Дашборд':lang==='th'?'แดชบอร์ด':'Dashboard',
@@ -3319,7 +3218,6 @@ function renderSidebar() {
   const rL=document.getElementById('lbl-rent'); if(rL) rL.textContent=lang==='ru'?'Аренда':lang==='th'?'เช่า':'Rent';
 }
 
-// ── ROLE SYSTEM ───────────────────────────────────────────────────────────────
 let currentRole='admin';
 function setRole(role) {
   currentRole=role;
@@ -3345,7 +3243,6 @@ document.addEventListener('click',e=>{
   if(e.target.classList.contains('modal-overlay')) e.target.classList.remove('open');
 });
 
-// ── NAVIGATION ────────────────────────────────────────────────────────────────
 function openModal(id){const el=document.getElementById(id);if(el)el.classList.add('open');}
 function closeModal(id){const el=document.getElementById(id);if(el)el.classList.remove('open');}
 function openClientModal(type){openModal('client-modal');setTimeout(()=>{const s=document.getElementById('f-c-deal-type');if(s){s.value=type;onDealTypeChange();}},50);}
@@ -3380,7 +3277,6 @@ function goPage(name) {
   }
 }
 
-// ── SETLANG ───────────────────────────────────────────────────────────────────
 function setLang(l) {
   lang=l;
   document.documentElement.lang=l;
@@ -3389,7 +3285,6 @@ function setLang(l) {
   renderLeads(); renderTasks(); renderReminders(); renderProperties(); renderKanban();
 }
 
-// ── DASHBOARD ─────────────────────────────────────────────────────────────────
 function renderDashboard() {
   const noNew=lang==='ru'?'Нет новых':'No new';
   const cL=lang==='ru'?'Связаться:':'Contact:';
@@ -3403,7 +3298,6 @@ function renderDashboard() {
   if(el('dash-sale-leads')) el('dash-sale-leads').innerHTML=saleH||`<div class="empty-state" style="padding:20px"><div class="empty-icon">📥</div>${noNew}</div>`;
 }
 
-// ── TOAST ─────────────────────────────────────────────────────────────────────
 let toastTimer;
 function showToast(msg) {
   const t=document.querySelector('.toast'); if(t) t.remove();
@@ -3413,7 +3307,6 @@ function showToast(msg) {
   toastTimer=setTimeout(()=>el.remove(),3500);
 }
 
-// ── CLIENT FORM LOGIC ─────────────────────────────────────────────────────────
 function onDealTypeChange() {
   const type=document.getElementById('f-c-deal-type')?.value;
   const wrap=document.getElementById('f-c-status-wrap');
@@ -3436,7 +3329,6 @@ function onStatusChange() {
 }
 function saveClient() { closeModal('client-modal'); showToast('✅ Клиент добавлен!'); }
 
-// ── INIT ──────────────────────────────────────────────────────────────────────
 renderSidebar();
 setRole('admin');
 renderAllClients();
