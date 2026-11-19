@@ -3341,5 +3341,52 @@ renderLeadsByType('rent','leads-rent-body','sub-leads-rent');
 renderReminders();
 renderDashboard();
 </script>
+<style id="mobile-css">
+.burger,.sb-back{display:none}
+@media(max-width:900px){
+  :root{--sidebar:260px}
+  .topbar{padding:0 10px 0 0;gap:8px}
+  .topbar-logo{width:auto;min-width:0;padding:0 6px 0 4px;gap:8px}
+  .logo-sub,.topbar-search,.user-chip>div:not(.user-avatar):not(#role-menu){display:none}
+  .user-chip{padding:3px}
+  .burger{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-left:4px;border:0;background:transparent;color:var(--text);font-size:22px;cursor:pointer;flex:none}
+  .sidebar{position:fixed;top:var(--topbar);bottom:0;left:0;z-index:160;transform:translateX(-105%);transition:transform .25s ease;overflow-y:auto;box-shadow:8px 0 30px rgba(0,0,0,.5)}
+  body.sb-open .sidebar{transform:none}
+  .sb-back{position:fixed;inset:var(--topbar) 0 0 0;background:rgba(0,0,0,.55);z-index:150}
+  body.sb-open .sb-back{display:block}
+  .page{overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .page-body{flex:none;overflow:visible;padding:0 12px 16px}
+  .page-head{padding:12px;flex-wrap:wrap;gap:10px}
+  .head-actions{flex-wrap:wrap}
+  .stats-row{grid-template-columns:repeat(2,minmax(0,1fr))!important;padding:12px;gap:10px}
+  .dash-grid,.form-row,.prop-grid{grid-template-columns:minmax(0,1fr)!important}
+  .page-body [style*="grid-template-columns"]:not(.kanban-board),.modal [style*="grid-template-columns"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .kanban-wrap{flex:none;overflow-x:auto;padding:0 12px 16px}
+  .kanban-board{min-height:62vh;grid-template-columns:repeat(var(--cols,7),240px)!important}
+  .table-card{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .table-card table{min-width:760px}.table-card td,.table-card th{white-space:nowrap}
+  .table-toolbar{flex-wrap:wrap}.table-toolbar input{max-width:none;min-width:100%}
+  .modal{width:100%;max-width:100%;max-height:92vh;padding:18px;border-radius:16px}
+  .modal-overlay{align-items:flex-end;padding:8px}
+  .toast{left:12px;right:12px;bottom:12px}
+  .dash-row-title{white-space:normal}
+}
+@media(max-width:520px){
+  .page-body [style*="grid-template-columns"]:not(.kanban-board),.modal [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important}
+  .lang-btn{padding:4px 6px}
+  .stat-value{font-size:22px}
+}
+</style>
+<div class="sb-back" onclick="document.body.classList.remove('sb-open')"></div>
+<script>
+(function(){
+  var tb=document.querySelector('.topbar');if(!tb)return;
+  var b=document.createElement('button');b.className='burger';b.type='button';b.setAttribute('aria-label','Menu');b.innerHTML='&#9776;';
+  b.onclick=function(){document.body.classList.toggle('sb-open')};
+  tb.insertBefore(b,tb.firstChild);
+  var og=window.goPage;if(typeof og==='function'){window.goPage=function(){var r=og.apply(this,arguments);document.body.classList.remove('sb-open');var p=document.querySelector('.page.active');if(p)p.scrollTop=0;return r}}
+  document.querySelectorAll('.kanban-board').forEach(function(k){var m=(k.getAttribute('style')||'').match(/repeat\((\d+)/);if(m)k.style.setProperty('--cols',m[1])});
+})();
+</script>
 </body>
 </html>
