@@ -381,7 +381,7 @@ tbody tr:hover td { background: var(--bg3); }
 .badge.rent   { background: var(--purple-bg); color: var(--purple); } .badge.rent::before   { background: var(--purple); }
 .badge.done   { background: var(--green-bg);  color: var(--green);  } .badge.done::before   { background: var(--green); }
 .badge.tg     { background: rgba(41,182,246,0.12); color: #29B6F6; }
-.badge.avito  { background: rgba(255,107,53,0.12);  color: #FF6B35; }
+.badge.board  { background: rgba(255,107,53,0.12);  color: #FF6B35; }
 .badge.fb     { background: rgba(66,103,178,0.12);  color: #4267B2; }
 .badge.line   { background: rgba(0,195,91,0.12);    color: #00C35B; }
 
@@ -609,13 +609,13 @@ tbody tr:hover td { background: var(--bg3); }
       <button class="lang-btn" onclick="setLang('en')">EN</button>
       <button class="lang-btn" onclick="setLang('th')">TH</button>
     </div>
-    <div class="notif-btn" onclick="showToast('📬 2 новых лида с Авито')">
+    <div class="notif-btn" onclick="showToast('📬 2 новых лида с Доска')">
       🔔<div class="notif-dot"></div>
     </div>
     <div class="user-chip" onclick="toggleRoleMenu()" style="position:relative">
-      <div class="user-avatar">МА</div>
+      <div class="user-avatar">АН</div>
       <div>
-        <div class="user-name">Михаил А.</div>
+        <div class="user-name">Алексей Н.</div>
         <div style="font-size:10px;color:var(--text3)" id="user-role-label">Менеджер</div>
       </div>
 
@@ -731,8 +731,8 @@ tbody tr:hover td { background: var(--bg3); }
       <div style="padding:8px 10px 6px;border-top:1px solid var(--border)">
         <div style="font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px" id="lbl-conn">Подключения</div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-          <div title="Авито" style="display:flex;align-items:center;gap:3px;font-size:18px;cursor:pointer" onclick="showToast('🅰️ Авито: 12 объявлений, подключён')">
-            🅰️<span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block"></span>
+          <div title="Доска" style="display:flex;align-items:center;gap:3px;font-size:18px;cursor:pointer" onclick="showToast('📋 Доска: 12 объявлений, подключён')">
+            📋<span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block"></span>
           </div>
           <div title="Facebook" style="display:flex;align-items:center;gap:3px;font-size:18px;cursor:pointer" onclick="showToast('📘 Facebook: подключён')">
             📘<span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block"></span>
@@ -757,7 +757,7 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="page-head">
         <div>
           <div class="page-title">Дашборд</div>
-          <div class="page-subtitle">Понедельник, 2 мая 2025 · Паттайя, Таиланд</div>
+          <div class="page-subtitle">Понедельник, 2 мая 2025</div>
         </div>
         <div class="head-actions">
           <button class="btn" onclick="showToast('📊 Экспорт отчёта...')">📊 Отчёт</button>
@@ -774,13 +774,13 @@ tbody tr:hover td { background: var(--bg3); }
           <div class="stat-icon blue">🔑</div>
           <div class="stat-label">Новые заявки аренда</div>
           <div class="stat-value blue">8</div>
-          <div class="stat-sub">Авито / FB / TG / Сайт</div>
+          <div class="stat-sub">Доска / FB / TG / Сайт</div>
         </div>
         <div class="stat-card green">
           <div class="stat-icon green">💰</div>
           <div class="stat-label">Новые заявки продажа</div>
           <div class="stat-value green">4</div>
-          <div class="stat-sub">Авито / FB / TG / Сайт</div>
+          <div class="stat-sub">Доска / FB / TG / Сайт</div>
         </div>
         <div class="stat-card red">
           <div class="stat-icon red">🔔</div>
@@ -855,7 +855,7 @@ tbody tr:hover td { background: var(--bg3); }
             </select>
             <select id="all-clients-source" onchange="renderAllClients()">
               <option value="">Все источники</option>
-              <option value="Avito">Авито</option>
+              <option value="Board">Доска</option>
               <option value="Facebook">Facebook</option>
               <option value="Telegram">Telegram</option>
               <option value="Сайт">Сайт</option>
@@ -898,7 +898,7 @@ tbody tr:hover td { background: var(--bg3); }
             </select>
             <select id="rent-source" onchange="renderRentClients()">
               <option value="">Все источники</option>
-              <option value="Avito">Авито</option>
+              <option value="Board">Доска</option>
               <option value="Facebook">Facebook</option>
               <option value="Telegram">Telegram</option>
               <option value="Сайт">Сайт</option>
@@ -940,7 +940,7 @@ tbody tr:hover td { background: var(--bg3); }
             </select>
             <select id="sale-source" onchange="renderSaleClients()">
               <option value="">Все источники</option>
-              <option value="Avito">Авито</option>
+              <option value="Board">Доска</option>
               <option value="Facebook">Facebook</option>
               <option value="Telegram">Telegram</option>
               <option value="Сайт">Сайт</option>
@@ -975,7 +975,7 @@ tbody tr:hover td { background: var(--bg3); }
           <div class="page-subtitle">52 объекта на продажу</div>
         </div>
         <div class="head-actions">
-          <button class="btn" onclick="showToast('🅰️ Публикация на Авито...')">🅰️ Авито</button>
+          <button class="btn" onclick="showToast('📋 Публикация на Доска...')">📋 Доска</button>
           <button class="btn" onclick="showToast('📘 Facebook...')">📘 FB</button>
           <button class="btn primary" onclick="openModal('prop-modal')" id="btn-add-prop-s">+ Добавить объект</button>
         </div>
@@ -987,7 +987,7 @@ tbody tr:hover td { background: var(--bg3); }
             <option id="sel-all-types-ps">Все типы</option><option>Villa</option><option>Condo</option><option>Apartment</option>
           </select>
           <select style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:7px 10px;font-size:13px;color:var(--text);font-family:var(--font)">
-            <option id="sel-all-regions-ps">Все регионы</option><option>Pattaya</option><option>Phuket</option><option>Bangkok</option><option>Samui</option>
+            <option id="sel-all-regions-ps">Все регионы</option><option>Coral Bay</option><option>Blue Lagoon</option><option>Metro City</option><option>Palm Island</option>
           </select>
         </div>
         <div class="prop-grid" id="prop-grid-sale"></div>
@@ -1001,7 +1001,7 @@ tbody tr:hover td { background: var(--bg3); }
           <div class="page-subtitle">32 объекта в аренду</div>
         </div>
         <div class="head-actions">
-          <button class="btn" onclick="showToast('🅰️ Авито...')">🅰️ Авито</button>
+          <button class="btn" onclick="showToast('📋 Доска...')">📋 Доска</button>
           <button class="btn" onclick="showToast('📘 Facebook...')">📘 FB</button>
           <button class="btn primary" onclick="openModal('prop-modal')" id="btn-add-prop-r">+ Добавить объект</button>
         </div>
@@ -1013,7 +1013,7 @@ tbody tr:hover td { background: var(--bg3); }
             <option>Все типы</option><option>Villa</option><option>Condo</option><option>Apartment</option>
           </select>
           <select style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:7px 10px;font-size:13px;color:var(--text);font-family:var(--font)">
-            <option>Все регионы</option><option>Pattaya</option><option>Phuket</option><option>Bangkok</option><option>Samui</option>
+            <option>Все регионы</option><option>Coral Bay</option><option>Blue Lagoon</option><option>Metro City</option><option>Palm Island</option>
           </select>
         </div>
         <div class="prop-grid" id="prop-grid-rent"></div>
@@ -1079,7 +1079,7 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="page-body" style="padding-top:16px">
         <div class="table-card">
           <div class="table-toolbar">
-            <select><option>Все источники</option><option>Авито</option><option>Facebook</option><option>Telegram</option><option>Сайт</option></select>
+            <select><option>Все источники</option><option>Доска</option><option>Facebook</option><option>Telegram</option><option>Сайт</option></select>
           </div>
           <table><thead><tr>
             <th>Источник</th><th>Имя</th><th>Контакт</th><th>Сообщение</th><th>Дата</th><th></th>
@@ -1101,7 +1101,7 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="page-body" style="padding-top:16px">
         <div class="table-card">
           <div class="table-toolbar">
-            <select><option>Все источники</option><option>Авито</option><option>Facebook</option><option>Telegram</option><option>Сайт</option></select>
+            <select><option>Все источники</option><option>Доска</option><option>Facebook</option><option>Telegram</option><option>Сайт</option></select>
           </div>
           <table><thead><tr>
             <th>Источник</th><th>Имя</th><th>Контакт</th><th>Сообщение</th><th>Дата</th><th></th>
@@ -1125,7 +1125,7 @@ tbody tr:hover td { background: var(--bg3); }
           <div class="table-toolbar">
             <select>
               <option>Все источники</option>
-              <option>Авито</option><option>Facebook</option><option>Telegram</option><option>LINE</option>
+              <option>Доска</option><option>Facebook</option><option>Telegram</option><option>LINE</option>
             </select>
             <select>
               <option>Все статусы</option><option>Новые</option><option>В работе</option><option>Конвертированы</option>
@@ -1158,7 +1158,7 @@ tbody tr:hover td { background: var(--bg3); }
         <div class="stat-card blue">
           <div class="stat-icon blue">🔑</div>
           <div class="stat-label">Pipeline — Аренда</div>
-          <div class="stat-value blue" id="pl-rent">฿138k/мес</div>
+          <div class="stat-value blue" id="pl-rent">$3.9k/мес</div>
           <div class="stat-sub">в активных сделках</div>
         </div>
         <div class="stat-card amber">
@@ -1192,13 +1192,13 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="page-head">
         <div>
           <div class="page-title">⚡ Панель администратора</div>
-          <div class="page-subtitle">Полный доступ · Abakumov Mikhail</div>
+          <div class="page-subtitle">Полный доступ · Novikov Alexey</div>
         </div>
       </div>
       <div class="stats-row" style="grid-template-columns:repeat(5,1fr)">
         <div class="stat-card amber"><div class="stat-icon amber">👥</div><div class="stat-label">Всего клиентов</div><div class="stat-value amber">247</div></div>
         <div class="stat-card green"><div class="stat-icon green">💰</div><div class="stat-label">Pipeline Продажа</div><div class="stat-value green">$2.4M</div></div>
-        <div class="stat-card blue"><div class="stat-icon blue">🔑</div><div class="stat-label">Pipeline Аренда</div><div class="stat-value blue">฿138k</div></div>
+        <div class="stat-card blue"><div class="stat-icon blue">🔑</div><div class="stat-label">Pipeline Аренда</div><div class="stat-value blue">$3.9k</div></div>
         <div class="stat-card red"><div class="stat-icon red">❌</div><div class="stat-label">Потеряно</div><div class="stat-value red">0</div></div>
         <div class="stat-card green"><div class="stat-icon green">🏆</div><div class="stat-label">Закрыто (мес)</div><div class="stat-value green">$220k</div></div>
       </div>
@@ -1217,7 +1217,7 @@ tbody tr:hover td { background: var(--bg3); }
           <div class="dash-card" style="cursor:pointer" onclick="goPage('admin-integrations')">
             <div class="dash-card-head"><span>🔗 Интеграции</span><span style="font-size:11px;color:var(--text3)">открыть →</span></div>
             <div style="padding:14px;display:flex;flex-direction:column;gap:8px">
-              <div style="display:flex;justify-content:space-between;font-size:12px"><span>🅰️ Авито</span><span style="color:var(--green)">● Активен</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:12px"><span>📋 Доска</span><span style="color:var(--green)">● Активен</span></div>
               <div style="display:flex;justify-content:space-between;font-size:12px"><span>📘 Facebook</span><span style="color:var(--green)">● Активен</span></div>
               <div style="display:flex;justify-content:space-between;font-size:12px"><span>✈️ Telegram</span><span style="color:var(--green)">● Активен</span></div>
               <div style="display:flex;justify-content:space-between;font-size:12px"><span>🌐 Сайт</span><span style="color:var(--red)">● Не настроен</span></div>
@@ -1237,7 +1237,7 @@ tbody tr:hover td { background: var(--bg3); }
       </div>
       <div class="stats-row" style="grid-template-columns:repeat(4,1fr)">
         <div class="stat-card green"><div class="stat-icon green">💰</div><div class="stat-label">Выручка (месяц)</div><div class="stat-value green">$220k</div><div class="stat-sub">+18% vs прошлый</div></div>
-        <div class="stat-card blue"><div class="stat-icon blue">📥</div><div class="stat-label">Заявок получено</div><div class="stat-value blue">47</div><div class="stat-sub">Авито 21 · FB 14 · TG 12</div></div>
+        <div class="stat-card blue"><div class="stat-icon blue">📥</div><div class="stat-label">Заявок получено</div><div class="stat-value blue">47</div><div class="stat-sub">Доска 21 · FB 14 · TG 12</div></div>
         <div class="stat-card amber"><div class="stat-icon amber">🔄</div><div class="stat-label">Конверсия</div><div class="stat-value amber">23%</div><div class="stat-sub">заявка → сделка</div></div>
         <div class="stat-card red"><div class="stat-icon red">💸</div><div class="stat-label">Комиссий ожидается</div><div class="stat-value red">2</div><div class="stat-sub">договор без оплаты</div></div>
       </div>
@@ -1297,10 +1297,10 @@ tbody tr:hover td { background: var(--bg3); }
 
           <div class="dash-card"><div style="padding:14px">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-              <span style="font-size:24px">🅰️</span>
-              <div><div style="font-weight:500;font-size:14px">Авито</div>
+              <span style="font-size:24px">📋</span>
+              <div><div style="font-weight:500;font-size:14px">Доска</div>
               <div style="font-size:12px;color:var(--green)">● Активен</div></div>
-              <button class="btn sm" style="margin-left:auto" onclick="showToast('⚙️ Настройки Авито')">Настроить</button>
+              <button class="btn sm" style="margin-left:auto" onclick="showToast('⚙️ Настройки Доска')">Настроить</button>
             </div>
             <div style="font-size:12px;color:var(--text2)">12 объявлений · 21 заявка этот месяц</div>
           </div></div>
@@ -1478,7 +1478,7 @@ tbody tr:hover td { background: var(--bg3); }
     <div class="form-row">
       <div class="form-group"><label>Источник</label>
         <select id="f-c-source">
-          <option>Авито</option><option>Facebook</option><option>Telegram</option>
+          <option>Доска</option><option>Facebook</option><option>Telegram</option>
           <option>LINE</option><option>Сайт</option><option>Реферал</option>
         </select>
       </div>
@@ -1510,17 +1510,15 @@ tbody tr:hover td { background: var(--bg3); }
         <div class="form-group">
           <label>Валюта</label>
           <select id="f-c-booking-currency">
-            <option value="THB">฿ THB (бат)</option>
-            <option value="USD">$ USD</option>
+                        <option value="USD">$ USD</option>
             <option value="EUR">€ EUR</option>
-            <option value="RUB">₽ RUB</option>
-          </select>
+                      </select>
         </div>
       </div>
     </div>
 
     <div class="form-group"><label>Запрос / Пожелания</label>
-      <input id="f-c-request" placeholder="Вилла 3 спальни, Паттайя, бассейн...">
+      <input id="f-c-request" placeholder="Вилла 3 спальни, Корал-Бэй, бассейн...">
     </div>
     <div class="form-row">
       <div class="form-group"><label>Бюджет от</label><input type="number" placeholder="100000"></div>
@@ -1560,8 +1558,8 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="modal-title">Добавить объект</div>
       <div class="modal-close" onclick="closeModal('prop-modal')">✕</div>
     </div>
-    <div class="form-group"><label>Название (RU)</label><input placeholder="Вилла с бассейном, Паттайя"></div>
-    <div class="form-group"><label>Title (EN)</label><input placeholder="Pool Villa, Pattaya"></div>
+    <div class="form-group"><label>Название (RU)</label><input placeholder="Вилла с бассейном, Корал-Бэй"></div>
+    <div class="form-group"><label>Title (EN)</label><input placeholder="Pool Villa, Coral Bay"></div>
     <div class="form-group"><label>ชื่อ (TH)</label><input placeholder="วิลล่าพร้อมสระว่ายน้ำ พัทยา"></div>
     <div class="form-row">
       <div class="form-group"><label>Тип</label>
@@ -1574,10 +1572,10 @@ tbody tr:hover td { background: var(--bg3); }
     <div class="form-row">
       <div class="form-group"><label>Цена</label><input type="number" placeholder="0"></div>
       <div class="form-group"><label>Валюта</label>
-        <select><option>THB ฿</option><option>USD $</option><option>EUR €</option><option>RUB ₽</option></select>
+        <select><option>USD $</option><option>EUR €</option></select>
       </div>
     </div>
-    <div class="form-group"><label>Локация</label><input placeholder="Pattaya, Jomtien Beach"></div>
+    <div class="form-group"><label>Локация</label><input placeholder="Coral Bay, Sunset Beach"></div>
     <div class="form-row">
       <div class="form-group"><label>Спальни</label><input type="number" value="2" min="0"></div>
       <div class="form-group"><label>м²</label><input type="number" placeholder="0"></div>
@@ -1606,11 +1604,11 @@ tbody tr:hover td { background: var(--bg3); }
       <label>Объект аренды *</label>
       <select id="rd-property">
         <option value="">— Выбрать объект —</option>
-        <option>Студия Ocean View, Паттайя Пратамнак</option>
-        <option>Бунгало на берегу, Самуи Чавенг</option>
-        <option>Апартаменты 2BR, Джомтьен</option>
-        <option>Кондо с видом на море, Пратамнак</option>
-        <option>Вилла с бассейном, Хуа Хин</option>
+        <option>Студия Ocean View, Корал-Бэй Хиллсайд</option>
+        <option>Бунгало на берегу, Палм-Айленд Палм-Бич</option>
+        <option>Апартаменты 2BR, Сансет-Бич</option>
+        <option>Кондо с видом на море, Хиллсайд</option>
+        <option>Вилла с бассейном, Роял-Кост</option>
       </select>
     </div>
     <div style="margin-bottom:14px">
@@ -1632,7 +1630,7 @@ tbody tr:hover td { background: var(--bg3); }
     <div id="rd-booking-block" style="display:none">
       <div style="height:1px;background:var(--border);margin:4px 0 12px"></div>
       <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;margin-bottom:8px">🔒 Детали бронирования</div>
-      <div class="form-group"><label>Сумма бронирования</label><input id="rd-booking-amount" placeholder="฿ 25,000"></div>
+      <div class="form-group"><label>Сумма бронирования</label><input id="rd-booking-amount" placeholder="$710"></div>
     </div>
     <div id="rd-checkin-block" style="display:none">
       <div style="height:1px;background:var(--border);margin:4px 0 12px"></div>
@@ -1642,8 +1640,8 @@ tbody tr:hover td { background: var(--bg3); }
         <div class="form-group"><label>Дата выезда</label><input id="rd-checkout-plan-date" type="date"></div>
       </div>
       <div class="form-row">
-        <div class="form-group"><label>Сумма аренды</label><input id="rd-rent-amount" placeholder="฿ 80,000/мес"></div>
-        <div class="form-group"><label>Депозит</label><input id="rd-deposit" placeholder="฿ 160,000"></div>
+        <div class="form-group"><label>Сумма аренды</label><input id="rd-rent-amount" placeholder="$2,300/мес"></div>
+        <div class="form-group"><label>Депозит</label><input id="rd-deposit" placeholder="$4,600"></div>
       </div>
     </div>
     <div id="rd-checkout-block" style="display:none">
@@ -1707,8 +1705,8 @@ tbody tr:hover td { background: var(--bg3); }
       <div style="font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;margin-bottom:8px">📋 Данные объекта (переуступка)</div>
       <div class="form-group"><label>Название</label><input id="sd-reassign-name" placeholder="ЖК / название"></div>
       <div class="form-row">
-        <div class="form-group"><label>Адрес / локация</label><input id="sd-reassign-addr" placeholder="Паттайя, Джомтьен"></div>
-        <div class="form-group"><label>Цена</label><input id="sd-reassign-price" placeholder="฿ 0"></div>
+        <div class="form-group"><label>Адрес / локация</label><input id="sd-reassign-addr" placeholder="Корал-Бэй, Сансет-Бич"></div>
+        <div class="form-group"><label>Цена</label><input id="sd-reassign-price" placeholder="$0"></div>
       </div>
       <div class="form-group"><label>Описание</label><textarea id="sd-reassign-desc" rows="2" placeholder="Площадь, этаж, особенности..."></textarea></div>
     </div>
@@ -1718,7 +1716,7 @@ tbody tr:hover td { background: var(--bg3); }
       </button>
       <div id="sd-agent-info" style="display:none;margin-top:8px;padding:10px 12px;background:var(--amber-bg);border-radius:var(--radius);font-size:12px;color:var(--amber)"></div>
     </div>
-    <div class="form-group"><label>Сумма сделки</label><input id="sd-amount" placeholder="฿ 0"></div>
+    <div class="form-group"><label>Сумма сделки</label><input id="sd-amount" placeholder="$0"></div>
     <div class="form-group"><label>Примечание</label><textarea id="sd-note" rows="2" placeholder="Детали..."></textarea></div>
     <div class="modal-footer">
       <button class="btn" onclick="closeModal('deal-modal-sale')">Отмена</button>
@@ -1737,10 +1735,10 @@ tbody tr:hover td { background: var(--bg3); }
     <div class="form-group"><label>ФИО агента *</label><input id="ag-name" placeholder="Иванов Иван Иванович"></div>
     <div class="form-group">
       <label>Телефон * (проверка на дубль)</label>
-      <input id="ag-phone" type="tel" placeholder="+66 81 234 5678" oninput="checkAgentDuplicate()">
+      <input id="ag-phone" type="tel" placeholder="+1 555 234 5678" oninput="checkAgentDuplicate()">
     </div>
     <div class="form-group"><label>Объект недвижимости *</label><input id="ag-property" placeholder="Название, адрес объекта"></div>
-    <div class="form-group"><label>Комиссия агента</label><input id="ag-commission" placeholder="3% или ฿ 50,000"></div>
+    <div class="form-group"><label>Комиссия агента</label><input id="ag-commission" placeholder="3% или $1,400"></div>
     <div class="modal-footer">
       <button class="btn" onclick="closeModal('agent-modal')">Отмена</button>
       <button class="btn primary" onclick="saveAgent()">✅ Сохранить агента</button>
@@ -1814,11 +1812,11 @@ tbody tr:hover td { background: var(--bg3); }
     <div class="form-row">
       <div class="form-group">
         <label>Комиссия</label>
-        <input id="contract-commission" type="text" placeholder="3% или 150,000 ฿">
+        <input id="contract-commission" type="text" placeholder="3% или $4,300">
       </div>
       <div class="form-group">
         <label>Сумма бронирования</label>
-        <input id="contract-booking" type="text" placeholder="50,000 ฿">
+        <input id="contract-booking" type="text" placeholder="$1,400">
       </div>
     </div>
     <div class="form-group">
@@ -1921,12 +1919,12 @@ tbody tr:hover td { background: var(--bg3); }
     </div>
     <div style="font-size:11px;font-weight:600;color:var(--green);text-transform:uppercase;margin-bottom:8px;margin-top:4px">💰 Финансовые условия</div>
     <div class="form-row">
-      <div class="form-group"><label>Цена аренды / мес *</label><input id="rct-rent" placeholder="฿ 18,000" oninput="calcRentBalance()"></div>
-      <div class="form-group"><label>Депозит</label><input id="rct-deposit" placeholder="฿ 36,000" oninput="calcRentBalance()"></div>
+      <div class="form-group"><label>Цена аренды / мес *</label><input id="rct-rent" placeholder="$510" oninput="calcRentBalance()"></div>
+      <div class="form-group"><label>Депозит</label><input id="rct-deposit" placeholder="$1,000" oninput="calcRentBalance()"></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label>Бронирование</label><input id="rct-booking" placeholder="฿ 18,000" oninput="calcRentBalance()"></div>
-      <div class="form-group"><label>Оплата (уже получено)</label><input id="rct-paid" placeholder="฿ 54,000" oninput="calcRentBalance()"></div>
+      <div class="form-group"><label>Бронирование</label><input id="rct-booking" placeholder="$510" oninput="calcRentBalance()"></div>
+      <div class="form-group"><label>Оплата (уже получено)</label><input id="rct-paid" placeholder="$1,500" oninput="calcRentBalance()"></div>
     </div>
 
     <div id="rct-balance-block" style="background:var(--bg3);border-radius:var(--radius);padding:12px;margin-bottom:12px">
@@ -1942,7 +1940,7 @@ tbody tr:hover td { background: var(--bg3); }
       <div style="height:1px;background:var(--border);margin:4px 0 12px"></div>
       <div style="font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;margin-bottom:8px">💼 Комиссия (только для директора)</div>
       <div class="form-row">
-        <div class="form-group"><label>Размер комиссии</label><input id="rct-commission" placeholder="฿ 8,000 или 1 мес"></div>
+        <div class="form-group"><label>Размер комиссии</label><input id="rct-commission" placeholder="$230 или 1 мес"></div>
         <div class="form-group"><label>Статус</label>
           <select id="rct-comm-status" style="width:100%;padding:8px 11px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);font-size:13px;color:var(--text);font-family:var(--font)">
             <option value="">— Не указано —</option>
@@ -1998,7 +1996,7 @@ tbody tr:hover td { background: var(--bg3); }
       <div class="modal-close" onclick="closeModal('sale-amount-modal')">✕</div>
     </div>
     <div id="sam-deal-info" style="background:var(--bg3);border-radius:var(--radius);padding:10px 12px;margin-bottom:14px;font-size:13px;font-weight:500"></div>
-    <div class="form-group"><label>Новая сумма сделки</label><input id="sam-amount" type="text" placeholder="฿ 0 или $ 0"></div>
+    <div class="form-group"><label>Новая сумма сделки</label><input id="sam-amount" type="text" placeholder="$0 или $ 0"></div>
     <div class="modal-footer">
       <button class="btn" onclick="closeModal('sale-amount-modal')">Отмена</button>
       <button class="btn primary" onclick="saveSaleAmount()">Сохранить</button>
@@ -2116,17 +2114,17 @@ function setLang(l) {
 }
 
 let clientsDB = [
-  { id:1,  name:'Александр Петров', email:'petrov@mail.ru',  phone:'+7 999 123-45-67',  request:'Вилла 3 спальни, Паттайя',  budget:'$250–400k', status:'warm',        source:'Avito',    manager:'МА' },
-  { id:2,  name:'Sarah Mitchell',   email:'sarah@gmail.com', phone:'+44 77 900 1234',   request:'Condo 1br, Jomtien',        budget:'$600/мес',  status:'negotiation', source:'Facebook', manager:'АК' },
+  { id:1,  name:'Александр Петров', email:'petrov@mail.ru',  phone:'+7 999 123-45-67',  request:'Вилла 3 спальни, Корал-Бэй',  budget:'$250–400k', status:'warm',        source:'Board',    manager:'МА' },
+  { id:2,  name:'Sarah Mitchell',   email:'sarah@gmail.com', phone:'+44 77 900 1234',   request:'Condo 1br, Sunset Beach',        budget:'$600/мес',  status:'negotiation', source:'Facebook', manager:'АК' },
   { id:3,  name:'Chen Wei',         email:'chen@qq.com',     phone:'+86 138 0013 8000', request:'Инвестиция 2+ объекта',     budget:'$1M+',      status:'advance',     source:'Telegram', manager:'МА' },
-  { id:4,  name:'Мария Иванова',    email:'ivanova@ya.ru',   phone:'+7 495 555-12-34',  request:'Апартаменты, Джомтьен',     budget:'$80–120k',  status:'new',         source:'Сайт',     manager:'НС' },
-  { id:5,  name:'James Anderson',   email:'james@hotm.com',  phone:'+1 212 555-0100',   request:'Villa with pool, Samui',    budget:'$400–700k', status:'deposit',     source:'Facebook', manager:'АК' },
-  { id:6,  name:'Наталья Смирнова', email:'nat@inbox.ru',    phone:'+7 812 444-56-78',  request:'Аренда виллы, Паттайя',     budget:'฿80k/мес', status:'booking',     source:'Avito',    manager:'НС' },
-  { id:7,  name:'Siriporn Kaew',    email:'siri@th.com',     phone:'+66 81 234 5678',   request:'คอนโดใกล้ทะเล',            budget:'฿18k/мес', status:'new',         source:'Сайт',     manager:'МА' },
-  { id:8,  name:'Anna Müller',      email:'anna@web.de',     phone:'+49 30 12345678',   request:'Villa Koh Samui',           budget:'$250–350k', status:'warm',        source:'Facebook', manager:'АК' },
-  { id:9,  name:'Андрей Козлов',    email:'kozlov@mail.ru',  phone:'+7 916 555-12-34',  request:'Квартира у моря, Паттайя', budget:'฿25k/мес', status:'new',         source:'Avito',    manager:'МА' },
-  { id:10, name:'Emma Thompson',    email:'emma@uk.com',     phone:'+44 79 111 2233',   request:'2br apartment, Bangkok',    budget:'$800/мес',  status:'moved_in',    source:'Facebook', manager:'АК' },
-  { id:11, name:'Дмитрий Орлов',   email:'orlov@ya.ru',     phone:'+7 999 888-77-66',  request:'Студия краткосрочно',       budget:'฿15k/мес', status:'new',         source:'Telegram', manager:'НС' },
+  { id:4,  name:'Мария Иванова',    email:'ivanova@ya.ru',   phone:'+7 495 555-12-34',  request:'Апартаменты, Сансет-Бич',     budget:'$80–120k',  status:'new',         source:'Сайт',     manager:'НС' },
+  { id:5,  name:'James Anderson',   email:'james@hotm.com',  phone:'+1 212 555-0100',   request:'Villa with pool, Palm Island',    budget:'$400–700k', status:'deposit',     source:'Facebook', manager:'АК' },
+  { id:6,  name:'Наталья Смирнова', email:'nat@inbox.ru',    phone:'+7 812 444-56-78',  request:'Аренда виллы, Корал-Бэй',     budget:'$2.3k/мес', status:'booking',     source:'Board',    manager:'НС' },
+  { id:7,  name:'Siriporn Kaew',    email:'siri@th.com',     phone:'+1 555 234 5678',   request:'คอนโดใกล้ทะเล',            budget:'$510/мес', status:'new',         source:'Сайт',     manager:'МА' },
+  { id:8,  name:'Anna Müller',      email:'anna@web.de',     phone:'+49 30 12345678',   request:'Villa Palm Island',           budget:'$250–350k', status:'warm',        source:'Facebook', manager:'АК' },
+  { id:9,  name:'Андрей Козлов',    email:'kozlov@mail.ru',  phone:'+7 916 555-12-34',  request:'Квартира у моря, Корал-Бэй', budget:'$710/мес', status:'new',         source:'Board',    manager:'МА' },
+  { id:10, name:'Emma Thompson',    email:'emma@uk.com',     phone:'+44 79 111 2233',   request:'2br apartment, Metro City',    budget:'$800/мес',  status:'moved_in',    source:'Facebook', manager:'АК' },
+  { id:11, name:'Дмитрий Орлов',   email:'orlov@ya.ru',     phone:'+7 999 888-77-66',  request:'Студия краткосрочно',       budget:'$430/мес', status:'new',         source:'Telegram', manager:'НС' },
 ];
 
 const rentClients = clientsDB;
@@ -2139,18 +2137,18 @@ let dealsData = {
     { id:2, t:'Кондо → Петров',     c:'Александр Петров',  p:'$320,000',    d:'02.05', stage:'negotiation', dealType:'sale' },
     { id:3, t:'Вилла → Anderson',   c:'James Anderson',    p:'$450,000',    d:'30.04', stage:'offer',       dealType:'sale' },
     { id:4, t:'Таунхаус → Müller',  c:'Anna Müller',       p:'$290,000',    d:'25.04', stage:'contract',    dealType:'sale',
-      contract:{ commission:'3%', booking:'฿50,000', payment:'50% аванс, 50% ключи', commReceived:null } },
+      contract:{ commission:'3%', booking:'$1,400', payment:'50% аванс, 50% ключи', commReceived:null } },
     { id:5, t:'Кондо → Wang',       c:'Wang Lei',          p:'$220,000',    d:'15.04', stage:'closed_won',  dealType:'sale' },
   ],
   rent: [
-    { id:6,  t:'Студия → Козлов',   c:'Андрей Козлов',     p:'฿25,000/мес', d:'02.05', stage:'new_lead',    dealType:'rent' },
+    { id:6,  t:'Студия → Козлов',   c:'Андрей Козлов',     p:'$710/мес', d:'02.05', stage:'new_lead',    dealType:'rent' },
     { id:7,  t:'Апарт. → Mitchell', c:'Sarah Mitchell',    p:'$600/мес',    d:'01.05', stage:'negotiation', dealType:'rent' },
-    { id:8,  t:'Вилла → Смирнова',  c:'Наталья Смирнова',  p:'฿80,000/мес', d:'28.04', stage:'booking',     dealType:'rent',
-      booking:{ amount:'฿80,000' } },
-    { id:9,  t:'Кондо → Kaew',      c:'Siriporn Kaew',     p:'฿18,000/мес', d:'03.05', stage:'contract',    dealType:'rent',
-      rentContract:{ dateFrom:'2025-05-01', dateTo:'2025-11-01', rentAmount:'฿18,000', deposit:'฿36,000',
-        booking:'฿18,000', commission:'฿8,000', paid:'฿54,000', meters:'Свет: 1240 кВт·ч', commReceived:null } },
-    { id:10, t:'Студия → Орлов',    c:'Дмитрий Орлов',     p:'฿15,000/мес', d:'20.04', stage:'closed_won',  dealType:'rent' },
+    { id:8,  t:'Вилла → Смирнова',  c:'Наталья Смирнова',  p:'$2,300/мес', d:'28.04', stage:'booking',     dealType:'rent',
+      booking:{ amount:'$2,300' } },
+    { id:9,  t:'Кондо → Kaew',      c:'Siriporn Kaew',     p:'$510/мес', d:'03.05', stage:'contract',    dealType:'rent',
+      rentContract:{ dateFrom:'2025-05-01', dateTo:'2025-11-01', rentAmount:'$510', deposit:'$1,000',
+        booking:'$510', commission:'$230', paid:'$1,500', meters:'Свет: 1240 кВт·ч', commReceived:null } },
+    { id:10, t:'Студия → Орлов',    c:'Дмитрий Орлов',     p:'$430/мес', d:'20.04', stage:'closed_won',  dealType:'rent' },
   ]
 };
 
@@ -2448,7 +2446,7 @@ function calcRentBalance() {
   const paid    = parseFloat((document.getElementById('rct-paid')?.value||'0').replace(/[^\d.]/g,''))||0;
   const due = deposit + booking + rent;
   const balance = paid - due;
-  const fmt = n => `฿ ${Math.abs(n).toLocaleString()}`;
+  const fmt = n => `$ ${Math.abs(n).toLocaleString()}`;
   document.getElementById('rct-total-due').textContent    = fmt(due)||'—';
   document.getElementById('rct-total-paid').textContent   = fmt(paid)||'—';
   const balEl = document.getElementById('rct-total-balance');
@@ -2628,7 +2626,7 @@ function createDealRent() {
   const newDeal = {
     id: Math.max(...dealsData.rent.map(d=>d.id),20)+1,
     t: `${property.split(',')[0]} → ${client.split(' ')[0]}`,
-    c: client, p:'฿ —', d:new Date().toLocaleDateString('ru').slice(0,5),
+    c: client, p:'$ —', d:new Date().toLocaleDateString('ru').slice(0,5),
     stage:finalStatus, dealType:'rent',
     agent: selectedAgentForDeal ? {...selectedAgentForDeal} : null,
   };
@@ -2650,7 +2648,7 @@ function createDealSale() {
   const newDeal = {
     id: Math.max(...dealsData.sale.map(d=>d.id),10)+1,
     t: `${propName.split(',')[0]} → ${client.split(' ')[0]}`,
-    c: client, p: document.getElementById('sd-amount')?.value||'฿ —',
+    c: client, p: document.getElementById('sd-amount')?.value||'$ —',
     d:new Date().toLocaleDateString('ru').slice(0,5),
     stage:finalStatus, dealType:'sale',
     agent: selectedAgentForDeal ? {...selectedAgentForDeal} : null,
@@ -2678,10 +2676,10 @@ function onSalePropTypeChange() {
   if (type==='reassign') { if(sw)sw.style.display='none'; if(rw)rw.style.display='block'; return; }
   if(rw) rw.style.display='none';
   const propLists = {
-    new:['ЖК Laguna Beach Resort','ЖК The Base, Паттайя','ЖК Riviera Monaco','ЖК The Riviera Jomtien'],
-    secondary:['Кондо 2BR, The Riviera','Апарт. 1BR, Джомтьен','Кондо Studio, Наклуа','Кондо 3BR, Пратамнак'],
-    house:['Дом 3BR+пул, Паттайя Восток','Вилла 4BR, Хуа Хин','Дом 2BR, Паньянг','Вилла 5BR, Банглаамунг'],
-    land:['Участок 400 м², Паттайя','Земля 800 м², Хуа Хин','Участок 1 рай, Чонбури','Земля 2 рай, Банг Ламунг'],
+    new:['ЖК Azure Bay Resort','ЖК The Core, Корал-Бэй','ЖК Monaco Heights','ЖК Sunset Riviera'],
+    secondary:['Кондо 2BR, Sunset Riviera','Апарт. 1BR, Сансет-Бич','Кондо Studio, Норт-Бэй','Кондо 3BR, Хиллсайд'],
+    house:['Дом 3BR+пул, Корал-Бэй Восток','Вилла 4BR, Роял-Кост','Дом 2BR, Лейксайд','Вилла 5BR, Банглаамунг'],
+    land:['Участок 400 м², Корал-Бэй','Земля 800 м², Роял-Кост','Участок 1 рай, Ист-Вэлли','Земля 2 рай, Грин-Вэлли'],
   };
   if (type && propLists[type]) {
     if(sw) sw.style.display='block';
@@ -2712,9 +2710,9 @@ function selectClient(inputId, listId, name, phone) {
 }
 
 let agentsData = [
-  {id:1,name:'Сомчай Виттая', phone:'+66 81 111 2233',property:'Кондо «The Base», Паттайя',commission:'3%',deals:2},
-  {id:2,name:'Анна Ли',       phone:'+66 82 333 4455',property:'Вилла Rawai, Пхукет',       commission:'฿80,000',deals:1},
-  {id:3,name:'Дмитрий Павлов',phone:'+7 916 777 8899',property:'ЖК «Laguna», Паттайя',      commission:'2.5%',deals:3},
+  {id:1,name:'Сомчай Виттая', phone:'+1 555 111 2233',property:'Кондо «The Core», Корал-Бэй',commission:'3%',deals:2},
+  {id:2,name:'Анна Ли',       phone:'+1 556 333 4455',property:'Вилла Lagoon Hills, Блю-Лагун',       commission:'$2,300',deals:1},
+  {id:3,name:'Дмитрий Павлов',phone:'+7 916 777 8899',property:'ЖК «Azure», Корал-Бэй',      commission:'2.5%',deals:3},
 ];
 let agentDealContext=null;
 let selectedAgentForDeal=null;
@@ -2897,12 +2895,12 @@ function confirmDeleteClient(name) {
 }
 
 const properties = [
-  {emoji:'🏖️',title_ru:'Вилла у моря, 3 спальни', loc:'Паттайя, Джомтьен', type:'Villa',    deal:'sale',price:'฿ 14,500,000',beds:3,baths:3,sqm:280,avito:true, fb:true, color:'linear-gradient(135deg,#1e3a5f,#2563eb)'},
-  {emoji:'🏙️',title_ru:'Кондо в центре',           loc:'Бангкок, Сукхумвит',type:'Condo',    deal:'sale',price:'฿ 6,200,000', beds:2,baths:2,sqm:65, avito:false,fb:true, color:'linear-gradient(135deg,#1a1a2e,#6366f1)'},
-  {emoji:'🌴',title_ru:'Студия Ocean View',         loc:'Паттайя, Пратамнак',type:'Apartment',deal:'rent',price:'฿ 22,000/мес',beds:0,baths:1,sqm:35, avito:true, fb:false,color:'linear-gradient(135deg,#0f4c75,#1b6ca8)'},
-  {emoji:'🌺',title_ru:'Вилла с бассейном, Пхукет',loc:'Пхукет, Раваи',    type:'Villa',    deal:'sale',price:'฿ 18,900,000',beds:4,baths:4,sqm:350,avito:false,fb:true, color:'linear-gradient(135deg,#1a3a2a,#2d6a4f)'},
-  {emoji:'🏝️',title_ru:'Бунгало на берегу, Самуи', loc:'Самуи, Чавенг',    type:'Villa',    deal:'rent',price:'฿ 85,000/мес',beds:3,baths:2,sqm:180,avito:false,fb:true, color:'linear-gradient(135deg,#3d1a00,#d97706)'},
-  {emoji:'🏗️',title_ru:'Таунхаус, Чиангмай',       loc:'Чиангмай, Нимман', type:'Townhouse',deal:'sale',price:'฿ 5,800,000', beds:3,baths:3,sqm:160,avito:true, fb:false,color:'linear-gradient(135deg,#1a1a1a,#4a4a4a)'},
+  {emoji:'🏖️',title_ru:'Вилла у моря, 3 спальни', loc:'Корал-Бэй, Сансет-Бич', type:'Villa',    deal:'sale',price:'$414,000',beds:3,baths:3,sqm:280,board:true, fb:true, color:'linear-gradient(135deg,#1e3a5f,#2563eb)'},
+  {emoji:'🏙️',title_ru:'Кондо в центре',           loc:'Метро-Сити, Централ-авеню',type:'Condo',    deal:'sale',price:'$177,000', beds:2,baths:2,sqm:65, board:false,fb:true, color:'linear-gradient(135deg,#1a1a2e,#6366f1)'},
+  {emoji:'🌴',title_ru:'Студия Ocean View',         loc:'Корал-Бэй, Хиллсайд',type:'Apartment',deal:'rent',price:'$630/мес',beds:0,baths:1,sqm:35, board:true, fb:false,color:'linear-gradient(135deg,#0f4c75,#1b6ca8)'},
+  {emoji:'🌺',title_ru:'Вилла с бассейном, Блю-Лагун',loc:'Блю-Лагун, Лагун-Хиллс',    type:'Villa',    deal:'sale',price:'$540,000',beds:4,baths:4,sqm:350,board:false,fb:true, color:'linear-gradient(135deg,#1a3a2a,#2d6a4f)'},
+  {emoji:'🏝️',title_ru:'Бунгало на берегу, Палм-Айленд', loc:'Палм-Айленд, Палм-Бич',    type:'Villa',    deal:'rent',price:'$2,400/мес',beds:3,baths:2,sqm:180,board:false,fb:true, color:'linear-gradient(135deg,#3d1a00,#d97706)'},
+  {emoji:'🏗️',title_ru:'Таунхаус, Маунтин-Вью',       loc:'Маунтин-Вью, Старый город', type:'Townhouse',deal:'sale',price:'$166,000', beds:3,baths:3,sqm:160,board:true, fb:false,color:'linear-gradient(135deg,#1a1a1a,#4a4a4a)'},
 ];
 function renderProperties() {
   const propCard=(p)=>`<div class="prop-card" onclick="showToast('🏠 ${p.title_ru}')">
@@ -2920,7 +2918,7 @@ function renderProperties() {
         <span class="prop-spec">📐 ${p.sqm} м²</span>
       </div>
       <div class="prop-integrations">
-        ${p.avito?`<span class="badge avito" style="font-size:10px">🅰️ Авито</span>`:''}
+        ${p.board?`<span class="badge board" style="font-size:10px">📋 Доска</span>`:''}
         ${p.fb?`<span class="badge fb" style="font-size:10px">📘 Facebook</span>`:''}
       </div>
     </div>
@@ -2934,10 +2932,10 @@ function renderProperties() {
 let tasks = [
   {title:'Позвонить Chen Wei — условия сделки',   due:'Сегодня, 11:00',priority:'high',  done:false,overdue:false,client:'Chen Wei'},
   {title:'Отправить договор Müller',               due:'Сегодня, 13:00',priority:'high',  done:false,overdue:false,client:'A. Müller'},
-  {title:'Показ виллы Anderson на Самуи',          due:'Вчера, 16:00',  priority:'high',  done:false,overdue:true, client:'J. Anderson'},
-  {title:'Follow-up: Козлов — апарты Джомтьен',   due:'30 апр, 10:00', priority:'normal',done:false,overdue:true, client:'Козлов'},
-  {title:'Встреча с застройщиком Laguna Pattaya',  due:'Завтра, 15:00', priority:'normal',done:false,overdue:false,client:''},
-  {title:'Обновить листинг: Вилла Пхукет на Авито',due:'4 мая',        priority:'low',   done:false,overdue:false,client:''},
+  {title:'Показ виллы Anderson на Палм-Айленд',          due:'Вчера, 16:00',  priority:'high',  done:false,overdue:true, client:'J. Anderson'},
+  {title:'Follow-up: Козлов — апарты Сансет-Бич',   due:'30 апр, 10:00', priority:'normal',done:false,overdue:true, client:'Козлов'},
+  {title:'Встреча с застройщиком Azure Bay',  due:'Завтра, 15:00', priority:'normal',done:false,overdue:false,client:''},
+  {title:'Обновить листинг: Вилла Блю-Лагун на Доска',due:'4 мая',        priority:'low',   done:false,overdue:false,client:''},
   {title:'Звонок Wiriyakit — финальное предложение',due:'Сегодня, 17:00',priority:'normal',done:true,overdue:false,client:'S. Wiriyakit'},
 ];
 
@@ -2961,12 +2959,12 @@ function renderTasks() {
 function toggleTask(i){tasks[i].done=!tasks[i].done;renderTasks();}
 
 const reminders=[
-  {client:'Андрей Козлов',  phone:'+7 916 555-12-34',source:'Авито',   type:'rent',days:3,action:'Связаться в WhatsApp, уточнить параметры'},
-  {client:'Siriporn Kaew',  phone:'+66 81 234 5678', source:'Сайт',    type:'sale',days:5,action:'Позвонить, уточнить бюджет'},
-  {client:'@user_pattaya',  phone:'Telegram',        source:'Telegram',type:'rent',days:2,action:'Написать в TG, предложить варианты'},
+  {client:'Андрей Козлов',  phone:'+7 916 555-12-34',source:'Доска',   type:'rent',days:3,action:'Связаться в WhatsApp, уточнить параметры'},
+  {client:'Siriporn Kaew',  phone:'+1 555 234 5678', source:'Сайт',    type:'sale',days:5,action:'Позвонить, уточнить бюджет'},
+  {client:'@user_coralbay',  phone:'Telegram',        source:'Telegram',type:'rent',days:2,action:'Написать в TG, предложить варианты'},
   {client:'Неизвестный',    phone:'+7 999 111-22-33',source:'Facebook',type:'rent',days:4,action:'FB Messenger, уточнить условия'},
 ];
-const srcIcon={Avito:'🅰️',Facebook:'📘',Telegram:'✈️',LINE:'💚',Сайт:'🌐',site:'🌐',avito:'🅰️',facebook:'📘',telegram:'✈️'};
+const srcIcon={Board:'📋',Facebook:'📘',Telegram:'✈️',LINE:'💚',Сайт:'🌐',site:'🌐',board:'📋',facebook:'📘',telegram:'✈️'};
 
 function renderReminders() {
   const el=document.getElementById('reminders-list'); if(!el) return;
@@ -2991,15 +2989,15 @@ function renderReminders() {
 }
 
 let leadsData=[
-  {id:1,source:'avito',   type:'rent',name:'Андрей Козлов', contact:'+7 916 555-12-34',msg:'Ищу квартиру у моря, аренда',date:'02.05 09:14'},
+  {id:1,source:'board',   type:'rent',name:'Андрей Козлов', contact:'+7 916 555-12-34',msg:'Ищу квартиру у моря, аренда',date:'02.05 09:14'},
   {id:2,source:'facebook',type:'sale',name:'Emma Thompson',  contact:'FB Messenger',    msg:'Looking for villa to buy',   date:'02.05 08:30'},
-  {id:3,source:'telegram',type:'rent',name:'@user_pattaya',  contact:'Telegram',        msg:'Есть квартиры в аренду?',    date:'01.05 22:45'},
-  {id:4,source:'site',    type:'sale',name:'Siriporn Kaew',  contact:'+66 81 234 5678', msg:'ต้องการซื้อคอนโด',          date:'01.05 18:20'},
-  {id:5,source:'avito',   type:'rent',name:'Дмитрий Орлов',  contact:'+7 999 888-77-66',msg:'Долгосрочная аренда виллы', date:'01.05 15:10'},
+  {id:3,source:'telegram',type:'rent',name:'@user_coralbay',  contact:'Telegram',        msg:'Есть квартиры в аренду?',    date:'01.05 22:45'},
+  {id:4,source:'site',    type:'sale',name:'Siriporn Kaew',  contact:'+1 555 234 5678', msg:'ต้องการซื้อคอนโด',          date:'01.05 18:20'},
+  {id:5,source:'board',   type:'rent',name:'Дмитрий Орлов',  contact:'+7 999 888-77-66',msg:'Долгосрочная аренда виллы', date:'01.05 15:10'},
 ];
 
 function renderLeads() {
-  const srcLabel={avito:'🅰️ Авито',facebook:'📘 Facebook',telegram:'✈️ Telegram',line:'💚 LINE',site:'🌐 Сайт'};
+  const srcLabel={board:'📋 Доска',facebook:'📘 Facebook',telegram:'✈️ Telegram',line:'💚 LINE',site:'🌐 Сайт'};
   const convL=t('btn_convert'); const delL=t('btn_delete');
   const typeRent=t('type_rent'); const typeSale=t('type_sale');
   const el=document.getElementById('leads-body'); if(!el) return;
@@ -3021,7 +3019,7 @@ function renderLeads() {
 
 function renderLeadsByType(type,bodyId,subId) {
   const el=document.getElementById(bodyId); if(!el) return;
-  const srcLabel={avito:'🅰️ Авито',facebook:'📘 Facebook',telegram:'✈️ Telegram',line:'💚 LINE',site:'🌐 Сайт'};
+  const srcLabel={board:'📋 Доска',facebook:'📘 Facebook',telegram:'✈️ Telegram',line:'💚 LINE',site:'🌐 Сайт'};
   const data=leadsData.filter(l=>l.type===type);
   const convL=t('btn_convert'); const delL=t('btn_delete');
   el.innerHTML=data.map(l=>`<tr>
@@ -3093,7 +3091,7 @@ function applyTemplate() {
 function previewBroadcast() {
   const txt=document.getElementById('broadcast-text')?.value;
   if(!txt){showToast('⚠️ Введите текст');return;}
-  alert('Предпросмотр:\n\n'+txt.replace('{name}','Александр').replace('{manager}','Михаил А.'));
+  alert('Предпросмотр:\n\n'+txt.replace('{name}','Александр').replace('{manager}','Алексей Н.'));
 }
 function sendBroadcast() {
   const txt=document.getElementById('broadcast-text')?.value;
@@ -3120,18 +3118,18 @@ function renderPipeline() {
 }
 
 const adminUsers=[
-  {name:'Абакумов Михаил',role:'admin',   deals:9, clients:11,active:true},
+  {name:'Новиков Алексей',role:'admin',   deals:9, clients:11,active:true},
   {name:'Алина Козлова',  role:'manager', deals:5, clients:6, active:true},
   {name:'Наталья С.',     role:'manager', deals:3, clients:5, active:true},
   {name:'Игорь В.',       role:'director',deals:0, clients:0, active:false},
 ];
 const adminLogs=[
-  {time:'02.05 11:42',user:'Абакумов М.',action:'Создана сделка',        obj:'Вилла → Chen Wei'},
+  {time:'02.05 11:42',user:'Новиков А.',action:'Создана сделка',        obj:'Вилла → Chen Wei'},
   {time:'02.05 11:30',user:'Козлова А.', action:'Добавлен клиент',       obj:'Андрей Козлов'},
-  {time:'02.05 10:55',user:'Абакумов М.',action:'Заявка конвертирована', obj:'Emma Thompson → Клиент'},
+  {time:'02.05 10:55',user:'Новиков А.',action:'Заявка конвертирована', obj:'Emma Thompson → Клиент'},
   {time:'02.05 10:20',user:'Наталья С.', action:'Сделка перемещена',     obj:'Mitchell: Переговоры'},
   {time:'01.05 18:34',user:'Козлова А.', action:'Клиент отложен',        obj:'Дмитрий Орлов до 15.06'},
-  {time:'01.05 17:10',user:'Абакумов М.',action:'Договор сохранён',      obj:'Таунхаус → Müller'},
+  {time:'01.05 17:10',user:'Новиков А.',action:'Договор сохранён',      obj:'Таунхаус → Müller'},
   {time:'01.05 16:00',user:'Наталья С.', action:'Задача выполнена',      obj:'Показ виллы Anderson'},
 ];
 function renderAdminDashboard() {
@@ -3141,8 +3139,8 @@ function renderAdminDashboard() {
   if(lp) lp.innerHTML=adminLogs.slice(0,4).map(l=>`<div class="dash-row"><div style="font-size:11px;color:var(--text3);font-family:var(--mono);width:80px;flex-shrink:0">${l.time}</div><div class="dash-row-info"><div class="dash-row-title" style="font-size:12px">${l.action}</div><div class="dash-row-sub">${l.obj}</div></div><div style="font-size:11px;color:var(--text2)">${l.user}</div></div>`).join('');
 }
 function renderAdminReports() {
-  const srcData=[{src:'🅰️ Авито',cnt:21,pct:45},{src:'📘 Facebook',cnt:14,pct:30},{src:'✈️ Telegram',cnt:12,pct:25},{src:'🌐 Сайт',cnt:0,pct:0}];
-  const manD=[{name:'Абакумов М.',deals:9,closed:2,conv:'22%'},{name:'Козлова А.',deals:5,closed:1,conv:'20%'},{name:'Наталья С.',deals:3,closed:0,conv:'0%'}];
+  const srcData=[{src:'📋 Доска',cnt:21,pct:45},{src:'📘 Facebook',cnt:14,pct:30},{src:'✈️ Telegram',cnt:12,pct:25},{src:'🌐 Сайт',cnt:0,pct:0}];
+  const manD=[{name:'Новиков А.',deals:9,closed:2,conv:'22%'},{name:'Козлова А.',deals:5,closed:1,conv:'20%'},{name:'Наталья С.',deals:3,closed:0,conv:'0%'}];
   const el=(id)=>document.getElementById(id);
   if(el('rep-sources')) el('rep-sources').innerHTML=srcData.map(s=>`<div class="dash-row"><div class="dash-row-info"><div class="dash-row-title">${s.src}</div></div><div style="flex:1;margin:0 12px"><div style="height:6px;background:var(--bg3);border-radius:4px;overflow:hidden"><div style="height:100%;width:${s.pct}%;background:var(--blue);border-radius:4px"></div></div></div><div style="font-size:12px;font-weight:600;font-family:var(--mono);width:30px;text-align:right">${s.cnt}</div></div>`).join('');
   if(el('rep-managers')) el('rep-managers').innerHTML=manD.map(m=>`<div class="dash-row"><div class="avatar" style="width:24px;height:24px;font-size:10px">${m.name.split(' ').map(w=>w[0]).join('').slice(0,2)}</div><div class="dash-row-info"><div class="dash-row-title">${m.name}</div><div class="dash-row-sub">${m.deals} сд · ${m.closed} закр</div></div><span class="badge new" style="font-size:11px">${m.conv}</span></div>`).join('');

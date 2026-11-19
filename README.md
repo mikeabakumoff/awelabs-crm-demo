@@ -1,4 +1,4 @@
-# AweLabs CRM — demo
+# AweLabs CRM - demo
 
 **[Live demo →](https://mikeabakumoff.github.io/awelabs-crm-demo/)**
 
@@ -7,7 +7,7 @@ lead intake, client and property registers, a deal pipeline, contracts for both
 rent and sale, and an admin area.
 
 > **Disclaimer.** This is a sanitized demo of a production system. All data shown
-> is synthetic — names, phone numbers, addresses and amounts were generated for
+> is synthetic - names, phone numbers, addresses and amounts were generated for
 > the demo. No customer data, credentials or business logic from the production
 > deployment is included here. The production backend is not part of this
 > repository, and the client is not named.
@@ -17,9 +17,9 @@ rent and sale, and an admin area.
 | | |
 |---|---|
 | ![Dashboard](docs/01-dashboard.png) | ![Deal pipeline](docs/02-kanban.png) |
-| Dashboard — today's tasks, reminders, incoming leads by channel | Deal pipeline — kanban across six stages |
+| Dashboard - today's tasks, reminders, incoming leads by channel | Deal pipeline - kanban across six stages |
 | ![Clients](docs/03-clients.png) | ![Contract](docs/04-contract.png) |
-| Client register — unified rent and sale, with source and status | Contract — commission, deposit, payment schedule |
+| Client register - unified rent and sale, with source and status | Contract - commission, deposit, payment schedule |
 
 ## What it does
 
@@ -41,7 +41,7 @@ rent and sale, and an admin area.
 ## Stack
 
 Vanilla JavaScript, HTML and CSS in a single self-contained file. No framework,
-no build step, no dependencies, no backend — everything runs in the browser,
+no build step, no dependencies, no backend - everything runs in the browser,
 which is exactly why it can be published as a static page.
 
 That is a demo constraint, not an architectural preference: the production
@@ -54,7 +54,7 @@ nothing to install.
 
 ---
 
-# AweLabs CRM — демо
+# AweLabs CRM - демо
 
 **[Живая версия →](https://mikeabakumoff.github.io/awelabs-crm-demo/)**
 
@@ -62,7 +62,7 @@ nothing to install.
 реестры клиентов и объектов, воронка сделок, договоры аренды и продажи,
 администраторская часть.
 
-> **Дисклеймер.** Это санированное демо боевой системы. Все данные синтетические —
+> **Дисклеймер.** Это санированное демо боевой системы. Все данные синтетические -
 > имена, телефоны, адреса и суммы сгенерированы для демонстрации. Ни клиентских
 > данных, ни доступов, ни бизнес-логики продакшена здесь нет. Серверная часть в
 > репозиторий не входит, заказчик не назван.
@@ -87,7 +87,7 @@ nothing to install.
 ## Стек
 
 Чистый JavaScript, HTML и CSS одним самодостаточным файлом. Ни фреймворка, ни
-сборки, ни зависимостей, ни бэкенда — всё работает в браузере, поэтому демо и
+сборки, ни зависимостей, ни бэкенда - всё работает в браузере, поэтому демо и
 публикуется статической страницей.
 
 Это ограничение демо, а не архитектурное предпочтение: у боевой системы, которую
